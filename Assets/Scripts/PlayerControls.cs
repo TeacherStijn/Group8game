@@ -11,6 +11,11 @@ public class PlayerControls : MonoBehaviour
 
     public int maxDashUses = 3;
 
+    public Animator animator;
+
+    private bool facingRight = true;
+
+
     [Tooltip("Separate cooldown time for each dash")]
     public float dashCooldown = 3f;
 
@@ -43,11 +48,39 @@ public class PlayerControls : MonoBehaviour
             rb.velocity = movement * moveSpeed;
         }
 
+        if (moveHorizontal == 0 && moveVertical == 0) //play idle animation if the character is not moving
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else //play run animation
+        {
+            animator.SetBool("isRunning", true);
+        }
+
+        if (moveHorizontal > 0 && !facingRight) //calls flipcharacter method
+        {
+            FlipCharacter();
+        }
+        if (moveHorizontal < 0 && facingRight)
+        {
+            FlipCharacter();
+        }
+
         // Check for dash input
         if (Input.GetButtonDown("Dash") && dashUsesRemaining > 0 && !isDashing)
         {
             StartCoroutine(Dash());
         }
+    }
+
+
+    private void FlipCharacter() //flips character if they are facing wrong way
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        
+        facingRight = !facingRight;
     }
 
     private IEnumerator Dash()
