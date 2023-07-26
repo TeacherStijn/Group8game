@@ -22,9 +22,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(player.transform.position);
-        StartCoroutine(StartShooting());
-        Debug.Log("***************** Coroutine done");
+        StartCoroutine(WaitWithShooting());
     }
 
     protected void Update()
@@ -33,15 +31,13 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= detectionRadius && startShooting)
         {
-            Debug.Log("--------------- FIRING! -------------");
-            Debug.Log("Wie is het? " + player.transform.position);
             weapon.Fire(player);
         }
 
         Move();
     }
 
-    IEnumerator StartShooting()
+    IEnumerator WaitWithShooting()
     {
         yield return new WaitForSeconds(2); // wait for 3 seconds
         startShooting = true;

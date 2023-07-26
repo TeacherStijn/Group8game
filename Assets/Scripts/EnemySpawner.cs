@@ -45,14 +45,20 @@ public class EnemySpawner : MonoBehaviour
         float camHeight = 2f * mainCamera.orthographicSize;
         float camWidth = camHeight * mainCamera.aspect;
 
+        //float levelH = GameObject.Find("LevelBackground").transform.position.y;
+        //float levelW = GameObject.Find("LevelBackground").transform.position.x;
+
         Vector3 spawnPos;
         bool canSpawnHere = false;
         int attempts = 0;
 
         do
         {
-            float spawnPosX = Random.Range(-camWidth / 2f - 1, camWidth / 2f + 1);  // The "+ 1" makes the enemy is spawning outside of the camera's view.
-            float spawnPosY = Random.Range(-camHeight / 2f - 1, camHeight / 2f + 1);
+            float spawnPosX = Random.Range(-camWidth / 2f - 1, camWidth / 2f);  // The "+ 1" makes the enemy is spawning outside of the camera's view.
+            float spawnPosY = Random.Range(-camHeight / 2f - 1, camHeight / 2f);
+
+            //float spawnPosX = Random.Range(-levelW / 2f - 1, levelW / 2f);  // The "+ 1" makes the enemy is spawning outside of the camera's view.
+            //float spawnPosY = Random.Range(-levelH / 2f - 1, levelH / 2f);
 
             // Determine which side of the screen to spawn the enemy on.
             int spawnSide = Random.Range(0, 4);
@@ -91,10 +97,10 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnGuardian(GameObject location)
     {
-        Vector3 spawnPos = location.transform.position;
+        Transform spawnPos = location.transform;
 
         // Hard coded one single guardian for now!
-        GameObject guardian = Instantiate(guardianPrefabs[0], spawnPos, Quaternion.identity);
+        GameObject guardian = Instantiate(guardianPrefabs[0], spawnPos.position, Quaternion.identity);
         AssignWeaponToEnemy(guardian.GetComponent<Enemy>());
     }
 
@@ -110,8 +116,8 @@ public class EnemySpawner : MonoBehaviour
             weaponHolder.transform.localPosition = new Vector3(0.5f, 0, 0); 
         }
 
-        Weapon weapon = Instantiate(enemy.weapon, weaponHolder.position, weaponHolder.rotation, weaponHolder);
-        weapon.user = enemy;
+        enemy.weapon = Instantiate(enemy.weapon, weaponHolder.position, weaponHolder.rotation, weaponHolder);
+        enemy.weapon.user = enemy;
     }
 
     // Nog even cleanup:

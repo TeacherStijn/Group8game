@@ -32,11 +32,11 @@ public class TempleSpawner : MonoBehaviour
         Vector3 spawnPos = new Vector3(distanceX, distanceY, 0);
 
         // Instantiate the temple.
-        Instantiate(templePrefab, spawnPos, Quaternion.identity);
+        GameObject temple = Instantiate(templePrefab, spawnPos, Quaternion.identity);
 
         Debug.Log("Temple added");
 
         // Spawn guardian as well
-        //GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().SpawnGuardian(temple);
+        GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().SpawnGuardian(temple);
     }
 }
