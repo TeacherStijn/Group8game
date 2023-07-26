@@ -13,16 +13,314 @@ MonoBehaviour:
   m_Name: Introduction
   m_EditorClassIdentifier: 
   actors:
+  - name: 
+    avatar: {fileID: 0}
   - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Onboard System
+    avatar: {fileID: 0}
+  - name: ???
     avatar: {fileID: 0}
   - name: Wizard
-    avatar: {fileID: 21300000, guid: c6c3271ba004a4c289980685b6d4e2b7, type: 3}
+    avatar: {fileID: 0}
+  backgroundImages:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 5bb19db0a4016449caea716e96c9555e, type: 3}
   messages:
   - actorId: 0
-    text: ...
+    backgroundId: 1
+    text: Somewhere in a galaxy far, far away...
   - actorId: 0
-    text: Where am I?
+    backgroundId: -1
+    text: There's a dark planet, littered with webs of light. A pack of mechs are
+      racing over its orbit, leaving behind trails of burned hydrogen.
+  - actorId: 0
+    backgroundId: -1
+    text: The mech in front is running away, dodging the hail of plasma bullets from
+      behind, fire blasting from places it shouldn't be.
+  - actorId: 2
+    backgroundId: -1
+    text: '*BEEP *BEEP*
+
+      Warning. System condition: DANGER.
+
+      Further
+      damage will result in imminent failure.'
+  - actorId: 0
+    backgroundId: -1
+    text: '*BOOM* The mech is hit with a blast.'
   - actorId: 1
-    text: Welcum.
+    backgroundId: -1
+    text: Damn! They won't give me a break!
+  - actorId: 2
+    backgroundId: -1
+    text: Warning. System-
   - actorId: 0
-    text: Huh?!
+    backgroundId: -1
+    text: Paying no mind to the warnings, Alice skillfully flies around a large satelite
+      orbiting the planet. As she does so, she turns around and shoots the first
+      mech that turns in its path.
+  - actorId: 0
+    backgroundId: -1
+    text: The unfortunate target explodes from the direct impact. The explosion does
+      not slow down the rest of the pursuers, however.
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 0
+    backgroundId: -1
+    text: Alice is being chased by elite soldiers of Quasarra, the biggest intergalactic
+      empire in the universe. All of these soldiers are experts in pursuit and have
+      survived countless battles.
+  - actorId: 0
+    backgroundId: -1
+    text: They have suffered colossal casualties chasing after Alice, but this was
+      calculated. They have come prepared with a hundred mechs stationed across the
+      planned pursuit area.
+  - actorId: 1
+    backgroundId: -1
+    text: ...There's no escaping this one.
+  - actorId: 0
+    backgroundId: -1
+    text: Alice knows. This isn't her first rodeo. She's been part of pursuit operations
+      before when fighting for the empire. The plan is always to capture the target
+      with 0 casualties.
+  - actorId: 0
+    backgroundId: -1
+    text: This is the second attempt at capturing her, dead or alive. The first time,
+      they sent a squad made up from the top 20 pilots they had available.
+  - actorId: 0
+    backgroundId: -1
+    text: Hard to believe, but she's managed to blast all of them.
+  - actorId: 0
+    backgroundId: -1
+    text: This time, they've come better prepared. They know that they can't avoid
+      casualties, so they're overpowering her with relentless overwhelming numbers.
+  - actorId: 0
+    backgroundId: -1
+    text: Chasing all at once is unfeasible. Up to 12 mechs are pursuing her at once,
+      while the rest reposition dynamically, ready to intercept.
+  - actorId: 0
+    backgroundId: -1
+    text: If she tries to go down on the surface, the anti-aircraft artillery will
+      take her out. If she tries to leave the orbit, she will be inviting her stalkers
+      to gun her down.
+  - actorId: 1
+    backgroundId: -1
+    text: Screw it! I'm not dying in a shitter like this!
+  - actorId: 0
+    backgroundId: -1
+    text: She's managed to thin the chasers down to 6. That's the lowest so far.
+  - actorId: 0
+    backgroundId: -1
+    text: Her mech won't last much longer in combat, so her best bet is to break
+      their formation, destroy the active pursuers and make a run for it outside
+      of the planet's orbit.
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 0
+    backgroundId: -1
+    text: '*whoosh*'
+  - actorId: 0
+    backgroundId: -1
+    text: '*hum*
+
+      *schwing*
+
+      *KABOOOM*'
+  - actorId: 0
+    backgroundId: -1
+    text: '*BANG* *BANG*'
+  - actorId: 0
+    backgroundId: -1
+    text: '*BANG*'
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 0
+    backgroundId: -1
+    text: It was over in a flash. Alice used the decoy flares she was saving up for
+      escape, with a hydrogen grenade meddled in. She stabbed the most isolated unit
+      and used it as body shield to shoot down the remaining units.
+  - actorId: 0
+    backgroundId: -1
+    text: It may have seemed like a kamikaze attack used as last resort, but for
+      Alice, this was a decisive moment. No time for hesitation. It was an improvised
+      plan,  executed with unmatched speed and precision.
+  - actorId: 1
+    backgroundId: -1
+    text: Hmph.
+  - actorId: 0
+    backgroundId: -1
+    text: This is Alice - The greatest, most notorious soldier in Quasarra. The Empire's
+      former hero and now its most wanted target. Her skills go far beyond talent
+      and her wits outperform any AI on the battlefield.
+  - actorId: 2
+    backgroundId: -1
+    text: Aircraft mode enabled. Redirect all energy into the flight engine.
+  - actorId: 0
+    backgroundId: -1
+    text: Without a moment of hesitation, Alice hurries outside of the orbit. Now
+      that she's in the open, all of her pursuers are flying towards her, looking
+      for a position to shoot.
+  - actorId: 0
+    backgroundId: -1
+    text: Her mech is severely damaged. Even so, it's designed for speed, If she
+      leaves their firing range, she's gone. They don't have the speed or energy
+      to catch up to her.
+  - actorId: 0
+    backgroundId: -1
+    text: She flies, creating a corridor of light around her. She starts evading
+      as lasers pass her by. She can no longer deflect them, and she can't slow down
+      and allow any more units to catch up.
+  - actorId: 2
+    backgroundId: -1
+    text: 'Englne integrity: 80%'
+  - actorId: 2
+    backgroundId: -1
+    text: 'Engine integrity: 66%'
+  - actorId: 2
+    backgroundId: -1
+    text: '*BEEP* *BEEP*
+
+      Warning. System condition: CRITICAL.
+
+      Cannot
+      maintain system functionality.'
+  - actorId: 1
+    backgroundId: -1
+    text: Almost... !!
+  - actorId: 0
+    backgroundId: -1
+    text: The lasers stop reaching her. She can only see the corridor of light in
+      front of her.
+  - actorId: 0
+    backgroundId: -1
+    text: The light becomes brighter and brighter and starts blinding her.
+  - actorId: 2
+    backgroundId: -1
+    text: Waning-
+  - actorId: 0
+    backgroundId: -1
+    text: She can no longer see, hear or feel anything. She can't tell if she's flying
+      or not. The light invades the insides of the mech. It feels warm. Yet Alice
+      is scared at the though of letting go of the controls.
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 0
+    backgroundId: -1
+    text: The light starts fading.
+  - actorId: 0
+    backgroundId: -1
+    text: It's like clouds being taken apart, one by one.
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 0
+    backgroundId: -1
+    text: Beyond the clouds, a vibrant mix of green and blue is burning into her
+      retina.
+  - actorId: 1
+    backgroundId: -1
+    text: Is this... a planet?!
+  - actorId: 1
+    backgroundId: -1
+    text: But how? Where? ...I've never seen such colors!
+  - actorId: 2
+    backgroundId: -1
+    text: Warning. Collision imminent.
+  - actorId: 1
+    backgroundId: -1
+    text: Crap!
+  - actorId: 1
+    backgroundId: -1
+    text: Engines are working. Why is it not changing course! I'll get turned into
+      nothing at this velocity!
+  - actorId: 1
+    backgroundId: -1
+    text: Huh? The parameters seem off. We should be burning from friction?
+  - actorId: 0
+    backgroundId: -1
+    text: It takes mere seconds to crash into the planet. Alice has no choice but
+      to watch as she pulled into the planet, the unnatural conditions hopefully
+      pointing to her survival.
+  - actorId: 0
+    backgroundId: -1
+    text: '*CRASH*'
+  - actorId: 0
+    backgroundId: -1
+    text: The sound of two masses colliding. A light shockwave expands into the distance.
+      Sending grass into the wind.
+  - actorId: 1
+    backgroundId: -1
+    text: Huh?
+  - actorId: 0
+    backgroundId: -1
+    text: Alice braced for impact, but it was lighter than expected. Not surprising,
+      given the weird conditions.
+  - actorId: 0
+    backgroundId: -1
+    text: On the mechs display, there is...
+  - actorId: 1
+    backgroundId: -1
+    text: Stone?
+  - actorId: 0
+    backgroundId: 0
+    text: She seems to have landed on some kind of stone monument in the middle of
+      a grassfield. A castle can barely be seen in the distance.
+  - actorId: 1
+    backgroundId: 0
+    text: Have I landed myself in fairyland or something? Not the heaven I imagined...
+  - actorId: 1
+    backgroundId: 0
+    text: Give me the location.
+  - actorId: 2
+    backgroundId: 0
+    text: 'Area: Unknown. Disconnected from the intergalactic network.'
+  - actorId: 1
+    backgroundId: 0
+    text: Radar malfunction? Damn.
+  - actorId: 2
+    backgroundId: 0
+    text: Negative. Radar system is functional. Scanning surroundings...
+  - actorId: 2
+    backgroundId: 0
+    text: Scan complete. Geological profile not found in the database.
+  - actorId: 1
+    backgroundId: 0
+    text: So I wasn't dreaming. That corridor of light must have brought me here...
+      Was it a trap? Or a wormhole? No... it was too sudden.
+  - actorId: 1
+    backgroundId: 0
+    text: ...
+  - actorId: 1
+    backgroundId: 0
+    text: Status report.
+  - actorId: 2
+    backgroundId: 0
+    text: 'Operating system: optimal'
+  - actorId: 2
+    backgroundId: 0
+    text: 'Locomotion system: maintenance required'
+  - actorId: 2
+    backgroundId: 0
+    text: 'Flight system: disabled'
+  - actorId: 2
+    backgroundId: 0
+    text: 'Shield system: disabled'
+  - actorId: 2
+    backgroundId: 0
+    text: 'Weapon system: critical'
+  - actorId: 1
+    backgroundId: 0
+    text: ...
+  - actorId: 2
+    backgroundId: 0
+    text: 'Human life form detected.
+
+      Distance: 20 meters.'
+  - actorId: 1
+    backgroundId: 0
+    text: ?!

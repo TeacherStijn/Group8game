@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
+  m_Name: Meeting with Wizard
+  m_EditorClassIdentifier: 
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Onboard System
+    avatar: {fileID: 0}
+  - name: Wiz
+    avatar: {fileID: 21300000, guid: c6c3271ba004a4c289980685b6d4e2b7, type: 3}
+  - name: ???
+    avatar: {fileID: 21300000, guid: c6c3271ba004a4c289980685b6d4e2b7, type: 3}
+  - name: Zylstra-loni-what??
+    avatar: {fileID: 21300000, guid: c6c3271ba004a4c289980685b6d4e2b7, type: 3}
+  backgroundImages: []
+  messages:
+  - actorId: 4
+    backgroundId: -1
+    text: Welc-
+  - actorId: 1
+    backgroundId: -1
+    text: Who are you?
+  - actorId: 5
+    backgroundId: -1
+    text: Do not worry. You are safe here. My name is Zylstraloniarvynthorianth.
+      I am the one who summoned you to the realm or Elyria.
+  - actorId: 1
+    backgroundId: -1
+    text: Zylstra-loni-what?? Have you summoned me here to mock me?
+  - actorId: 5
+    backgroundId: -1
+    text: Ah, excuse me! You are not used to names from our realm... You can call
+      me Wizard. You must be more familliar with that.
+  - actorId: 1
+    backgroundId: -1
+    text: Ok, Wiz. I'm Alice.
+  - actorId: 3
+    backgroundId: -1
+    text: Ah, a diminutive. I see Alice has fallen into this old man's charms! Haha!
+  - actorId: 1
+    backgroundId: -1
+    text: You wish.
+  - actorId: 1
+    backgroundId: -1
+    text: Now, how did you summon me? And why?
+  - actorId: 3
+    backgroundId: -1
+    text: '*Ahem* I can tell you are not familiar with magic. It would be difficult
+      to explain. All you need to know is that this is a very difficult ritual made
+      to summon a champion from another world.'
+  - actorId: 1
+    backgroundId: -1
+    text: Well, I guess you could call me that, but you caught me in a bad condition.
+      Might have saved my life, actually.
+  - actorId: 3
+    backgroundId: -1
+    text: I am glad to hear that. Otherworldy summon tends to work this way. A hero
+      in need of help, summoned to a world in need of a hero.
+  - actorId: 1
+    backgroundId: -1
+    text: Hmm. So why do you need me?
+  - actorId: 3
+    backgroundId: -1
+    text: A hundred years ago, our world was in grave danger. A dragon that has lived
+      from time immemorial went berserk and wanted to destroy humanity.
+  - actorId: 3
+    backgroundId: -1
+    text: That dragon was defeated right here, in this place. However, a dragon is
+      an immortal being. It will eventually come back to life.
+  - actorId: 3
+    backgroundId: -1
+    text: The most powerful mages used all their knowledge to seal the evil dragon
+      as best as they could. They created a powerful spell that should have lasted
+      forever. But it is falling apart.
+  - actorId: 3
+    backgroundId: -1
+    text: The seal has 5 components. One is this very seal we're standing one. The
+      others are four ancient relics, spread across these plains.
+  - actorId: 3
+    backgroundId: -1
+    text: The relics were used to cast the spell, and they can also undo it. We need
+      them in order to replace the seal.
+  - actorId: 3
+    backgroundId: -1
+    text: But, since the seal was meant to last forever, the relics themselves have
+      been guarded by ancient beasts and protected from all life from this realm.
+  - actorId: 1
+    backgroundId: -1
+    text: This is where you need me? Someone from another world who is not affected
+      by the seal?
+  - actorId: 3
+    backgroundId: -1
+    text: The relics were used to cast the spell, and they can also undo it. Since
+      the seal was meant to last forever, the relics have been protected from all
+      life on this continent.
+  - actorId: 3
+    backgroundId: -1
+    text: Exactly! Knowledge about the seal has been passed down from legend. But
+      the seal on the relics remains a mistery.
+  - actorId: 3
+    backgroundId: -1
+    text: Normal humans cannot even enter this area. This is why I have come here
+      to summon you, hero. Will you please save us?
+  - actorId: 1
+    backgroundId: -1
+    text: '*sigh* '
+  - actorId: 1
+    backgroundId: -1
+    text: Fine. I guess that's the least I could do.
+  - actorId: 1
+    backgroundId: -1
+    text: All I have to do is break through the seal and retrieve the relics? What
+      will happen after?
+  - actorId: 3
+    backgroundId: -1
+    text: This land's king will want to thank you in person. You will be rewarded
+      for your efforts, and become a legend for generations to revere.
+  - actorId: 3
+    backgroundId: -1
+    text: After that, you will be able to return to your world. Or remain here, if
+      you so desire.
+  - actorId: 1
+    backgroundId: -1
+    text: Sounds fair...
+  - actorId: 1
+    backgroundId: -1
+    text: But why not summon me in the kingdom? Is there nobody else here? One would
+      expect a different kind of welcome.
+  - actorId: 3
+    backgroundId: -1
+    text: I am sorry, but it takes a great deal of magical aptitude to even get here.
+      No noble or soldier could make it here. I, as the court wizard, have been entrusted
+      solely with this task.
+  - actorId: 3
+    backgroundId: -1
+    text: Now, let me show you a map of the surroundings.
+  - actorId: 1
+    backgroundId: -1
+    text: Is this good enough?
+  - actorId: 3
+    backgroundId: -1
+    text: Oh, what sorcery is this? It looks quite different from anything I've seen.
+  - actorId: 1
+    backgroundId: -1
+    text: It's... a hologram.
+  - actorId: 3
+    backgroundId: -1
+    text: ...
+  - actorId: 1
+    backgroundId: -1
+    text: It's ancient technology in my world.
+  - actorId: 3
+    backgroundId: -1
+    text: Truly impressive! Now, the locations are the following...
+  - actorId: 0
+    backgroundId: -1
+    text: 
+  - actorId: 3
+    backgroundId: -1
+    text: And be wary of the fiends in these plains. Few humans have crossed here
+      in the past century, and the reviving dragon's magic has attracted a lot of
+      powerful creatures.
+  - actorId: 3
+    backgroundId: -1
+    text: But I am sure that you can defeat them, noble hero!
+  - actorId: 1
+    backgroundId: -1
+    text: Me? Won't you be coming as well?
+  - actorId: 3
+    backgroundId: -1
+    text: Ah! I wish! But I am but an old man. My magic is quite potent, but I am
+      too slow to keep up with you or with the fiends here. I've only made it here
+      by concealing my presence.
+  - actorId: 1
+    backgroundId: -1
+    text: (So much for the old man's charms)
