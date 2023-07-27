@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779615290118432469ff79d5b7cc6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 30
   lifetime: 1
   faceForward: 1
 --- !u!50 &-8131124677439258146

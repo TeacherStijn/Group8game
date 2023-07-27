@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [Tooltip("Projectile speed in units per second")]
+    public float speed = 10f;
+
     [Tooltip("The object will be destroyed after this many seconds")]
     public float lifetime = 10f;
 
@@ -14,6 +17,8 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        rb.velocity *= speed / rb.velocity.magnitude;
 
         if (faceForward)
         {

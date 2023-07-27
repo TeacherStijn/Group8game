@@ -7,7 +7,6 @@ public class MagicGun : Weapon
 {
     [SerializeField]
     public GameObject magicPrefab;
-    public float bulletSpeed = 10f;
     public float fireDelay = 0.5f;
     private bool isReadyToFire = true;
 
@@ -24,7 +23,7 @@ public class MagicGun : Weapon
 
             GameObject magicBullet = Instantiate(magicPrefab, user.transform.position + Vector3.up, Quaternion.identity);
 
-            magicBullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+            magicBullet.GetComponent<Rigidbody2D>().velocity = direction;
 
             Debug.Log("Magic gun fired");
 

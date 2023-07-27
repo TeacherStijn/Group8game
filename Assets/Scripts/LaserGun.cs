@@ -8,7 +8,6 @@ public class LaserGun : Weapon
     public GameObject laserPrefab;
     public float chargeTime = 2.0f;
     public float laserDuration = 1.0f;
-    public float laserSpeed = 10f;
 
     private bool isCharging = false;
 
@@ -37,10 +36,11 @@ public class LaserGun : Weapon
 
         yield return new WaitForSeconds(chargeTime);
 
-        // Instantiate the laser at the top of the enemy
         Vector2 direction = (target.transform.position - user.transform.position).normalized;
+
         GameObject laser = Instantiate(laserPrefab, user.transform.position + Vector3.up, Quaternion.identity);
-        laser.GetComponent<Rigidbody2D>().velocity = direction * laserSpeed;
+
+        laser.GetComponent<Rigidbody2D>().velocity = direction;
 
         Debug.Log("Laser fired");
         
