@@ -70,6 +70,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetButtonDown("Dash") && dashUsesRemaining > 0 && !isDashing)
         {
             StartCoroutine(Dash());
+            animator.SetTrigger("dashTrigger");
         }
     }
 
