@@ -9,6 +9,7 @@ public class RockSpawner : MonoBehaviour
     public float xSpawnRange = 175;
     public float ySpawnRange = 175;
     public int maxRocks = 200;
+    public Transform spawnedObjectContainer;
 
     private Camera mainCamera;
 
@@ -39,7 +40,11 @@ public class RockSpawner : MonoBehaviour
             if (canSpawnHere)
             {
                 //Instantiate tree at the spawn position.
-                Instantiate(rockPrefab, spawnPosition, Quaternion.identity);
+                GameObject rock = Instantiate(rockPrefab, spawnPosition, Quaternion.identity);
+                if (spawnedObjectContainer)
+                {
+                    rock.transform.parent = spawnedObjectContainer;
+                }
             }
         }
     }
