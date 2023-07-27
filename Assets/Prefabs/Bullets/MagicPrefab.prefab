@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4294333236820088716}
   m_Layer: 0
   m_Name: MagicPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8796186726461012071
 SpriteRenderer:
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779615290118432469ff79d5b7cc6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 10
+  faceForward: 1
 --- !u!50 &7804624120254413713
 Rigidbody2D:
   serializedVersion: 4

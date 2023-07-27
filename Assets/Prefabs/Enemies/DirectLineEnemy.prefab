@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5496118506612786649}
   m_Layer: 0
   m_Name: DirectLineEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,10 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0390e5d30d66b554d86afad4474e98ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  health: 0
-  detectionRadius: 0
+  speed: 5
+  health: 3
+  detectionRadius: 15
+  player: {fileID: 0}
   weapon: {fileID: 8719040952276640495, guid: dcc84aadaa5818646bdbb7ed8f225534, type: 3}
+  loot: {fileID: 0}
 --- !u!61 &5496118506612786649
 BoxCollider2D:
   m_ObjectHideFlags: 0

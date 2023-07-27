@@ -13,7 +13,6 @@ public class MachineGun : Weapon
     protected override void Start()
     {
         base.Start();
-        // player = GameObject.Find("Player");
     }
 
     public override void Fire(GameObject target)

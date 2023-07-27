@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   user: {fileID: 0}
-  player: {fileID: 0}
   magicPrefab: {fileID: 4823847641750537725, guid: f9b5dbe0a5c96b845b177169852afeb5, type: 3}
-  bulletSpeed: 5
+  bulletSpeed: 15
   fireDelay: 0.5

@@ -97,5 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca57dd128e0cdcc4cb5174f05cfdb1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user: {fileID: 0}
   laserPrefab: {fileID: 3498964201339439061, guid: 915e9b27d50db1b4899f4d8dc22ade32, type: 3}
-  firePoint: {fileID: 0}
+  chargeTime: 2
+  laserDuration: 1
+  laserSpeed: 30

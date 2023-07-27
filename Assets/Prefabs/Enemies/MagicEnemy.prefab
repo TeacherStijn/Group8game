@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5496118506612786649}
   m_Layer: 0
   m_Name: MagicEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0390e5d30d66b554d86afad4474e98ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  health: 0
-  detectionRadius: 0
+  speed: 3
+  health: 5
+  detectionRadius: 25
+  player: {fileID: 0}
   weapon: {fileID: -2752169779941642499, guid: c7fdce0f9c6b066418bd1afa2e23b0a6, type: 3}
   loot: {fileID: 0}
 --- !u!61 &5496118506612786649

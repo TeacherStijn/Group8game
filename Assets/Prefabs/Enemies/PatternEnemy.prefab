@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4569272456830024238}
   m_Layer: 0
   m_Name: PatternEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b027df856c48bf449dafdaf9509d51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  health: 0
-  detectionRadius: 0
+  speed: 10
+  health: 1
+  detectionRadius: 5
+  player: {fileID: 0}
   weapon: {fileID: 8719040952276640495, guid: dcc84aadaa5818646bdbb7ed8f225534, type: 3}
   loot: {fileID: 0}
   xSpeed: 1

@@ -14,7 +14,6 @@ public class PatternEnemy : Enemy
     {
         base.Start();
         pos = transform.position;
-        this.detectionRadius = 5f;
     }
 
     public override void Move()

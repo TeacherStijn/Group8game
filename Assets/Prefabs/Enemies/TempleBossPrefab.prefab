@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1375269350308879608}
   m_Layer: 0
   m_Name: TempleBossPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,11 +98,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f720e800064f84687745a94ea547d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  health: 0
-  detectionRadius: 0
+  speed: 1
+  health: 50
+  detectionRadius: 20
+  player: {fileID: 0}
   weapon: {fileID: -2752169779941642499, guid: c7fdce0f9c6b066418bd1afa2e23b0a6, type: 3}
   loot: {fileID: 5139893536898442296, guid: 2d272204b95598241b42b5539583538b, type: 3}
+  startPoint: {fileID: 0}
+  updateInterval: 1
+  range: 7
 --- !u!61 &1375269350308879608
 BoxCollider2D:
   m_ObjectHideFlags: 0
