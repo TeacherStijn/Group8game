@@ -15,13 +15,13 @@ public class MagicGun : Weapon
         base.Start();
     }
 
-    public override void Fire(GameObject target)
+    public override void Fire(Vector3 target)
     {
-        if (isReadyToFire && target)
+        if (isReadyToFire)
         {
-            Vector2 direction = (target.transform.position - user.transform.position).normalized;
+            Vector2 direction = (target - user.position).normalized;
 
-            GameObject magicBullet = Instantiate(magicPrefab, user.transform.position + Vector3.up, Quaternion.identity);
+            GameObject magicBullet = Instantiate(magicPrefab, user.position + Vector3.up, Quaternion.identity);
 
             magicBullet.GetComponent<Rigidbody2D>().velocity = direction;
 

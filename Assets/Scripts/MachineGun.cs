@@ -14,13 +14,13 @@ public class MachineGun : Weapon
         base.Start();
     }
 
-    public override void Fire(GameObject target)
+    public override void Fire(Vector3 target)
     {
         if (isReadyToFire)
         {
-            Vector2 direction = (target.transform.position - user.transform.position).normalized;
+            Vector2 direction = (target - user.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, user.transform.position + Vector3.up, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, user.position + Vector3.up, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody2D>().velocity = direction;
 

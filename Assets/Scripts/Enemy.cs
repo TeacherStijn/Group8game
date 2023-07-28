@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= detectionRadius && startShooting)
         {
-            weapon.Fire(player);
+            weapon.Fire(player.transform.position);
         }
 
         Move();
