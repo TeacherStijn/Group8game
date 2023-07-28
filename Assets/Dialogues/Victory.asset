@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
   m_Name: Victory
   m_EditorClassIdentifier: 
-  actors: []
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  backgroundImages: []
   messages: []

@@ -12,5 +12,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
   m_Name: Relic1
   m_EditorClassIdentifier: 
-  actors: []
-  messages: []
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Forest Guardian
+    avatar: {fileID: 21300000, guid: 70a88b80d1f004658a91a4020e83dcc4, type: 3}
+  - name: Onboard System
+    avatar: {fileID: 0}
+  backgroundImages: []
+  messages:
+  - actorId: 1
+    backgroundId: -1
+    text: The Wind relic should be in this area.
+  - actorId: 0
+    backgroundId: -1
+    text: '*Rustle* *Rustle*'
+  - actorId: 0
+    backgroundId: -1
+    text: As Alice aproaches the rough coordinates, the forest begins to shake.
+  - actorId: 0
+    backgroundId: -1
+    text: Leaves start rustling throughout the forest.
+  - actorId: 0
+    backgroundId: -1
+    text: A platch of flowers starts rising while making a terrible cracking noise.
+      With it, a large figuring reveals itself, towering over the mech.
+  - actorId: 1
+    backgroundId: -1
+    text: Doesn't look very friendly.
+  - actorId: 0
+    backgroundId: -1
+    text: As Alice prepares for combat, the figure starts speaking with reverberating
+      sounds.
+  - actorId: 2
+    backgroundId: -2
+    text: A human? This time from another world? Have you been sent to plunder this
+      sacred place as well?
+  - actorId: 1
+    backgroundId: -1
+    text: I wouldn't use the word "plunder"... Wait, there have been other people
+      before?
+  - actorId: 2
+    backgroundId: -1
+    text: Humans are not allowed to enter this place, and for good reason! Yet, over
+      the last century, there have been 3 people who have broken past the sacred
+      barrier.
+  - actorId: 2
+    backgroundId: -1
+    text: You are the last of them.
+  - actorId: 1
+    backgroundId: -1
+    text: And the one before me?
+  - actorId: 2
+    backgroundId: -1
+    text: A fool, like the others.
+  - actorId: 1
+    backgroundId: -1
+    text: ...
+  - actorId: 2
+    backgroundId: -1
+    text: It was less than an year ago. An old man wanted to steal my relic. His
+      nefarious reason were apparent through his charade.
+  - actorId: 2
+    backgroundId: -1
+    text: But he wise enough to leave.
+  - actorId: 2
+    backgroundId: -1
+    text: Now, what about you? You don't seem to want my relic. Yet here you are,
+      out of your own will.
+  - actorId: 1
+    backgroundId: -1
+    text: I heard that these relics were used to seal a dragon.
+  - actorId: 2
+    backgroundId: -1
+    text: Yes.
+  - actorId: 1
+    backgroundId: -1
+    text: And the seal is breaking apart. We need the relics in order to renew it.
+  - actorId: 2
+    backgroundId: -1
+    text: And who told you this?
+  - actorId: 1
+    backgroundId: -1
+    text: A wizard. His name is... psst
+  - actorId: 3
+    backgroundId: -1
+    text: Zylstraloniarvynthorianth
+  - actorId: 1
+    backgroundId: -1
+    text: Zylstra-lonia-veen-thorian
+  - actorId: 2
+    backgroundId: -1
+    text: Hmm... a human... and also a wizard?
+  - actorId: 2
+    backgroundId: -1
+    text: I do not know about the seal, but my purpose is to protect this forest...
+  - actorId: 2
+    backgroundId: -1
+    text: From humans.

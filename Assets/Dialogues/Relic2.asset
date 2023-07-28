@@ -12,5 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
   m_Name: Relic2
   m_EditorClassIdentifier: 
-  actors: []
-  messages: []
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Forest Guardian
+    avatar: {fileID: 21300000, guid: feae90600911a421d9eef9bcd29a3474, type: 3}
+  - name: Onboard System
+    avatar: {fileID: 0}
+  backgroundImages: []
+  messages:
+  - actorId: 1
+    backgroundId: 0
+    text: The Water relic should be around here.
+  - actorId: 1
+    backgroundId: 0
+    text: But it's an open area. Is it buried in the ground?
+  - actorId: 1
+    backgroundId: 0
+    text: ...
+  - actorId: 3
+    backgroundId: 0
+    text: Large life form detected underneath. Getting closer.
+  - actorId: 1
+    backgroundId: 0
+    text: '!?'
+  - actorId: 0
+    backgroundId: 0
+    text: The earth starts shaking violently, threatening to swallow the mech. A
+      forest guardian raises from the muddy ground.
+  - actorId: 0
+    backgroundId: 0
+    text: A giant monster with a large tree-like limbs and a mouth spanning over
+      its entire head. Its hideous body is shaking furiously as it rises to the surface.
+  - actorId: 2
+    backgroundId: 0
+    text: ROAAARRR
+  - actorId: 0
+    backgroundId: 0
+    text: Immediately, the monster swings one of its limbs, attemping to grab the
+      mech.
+  - actorId: 1
+    backgroundId: 0
+    text: Tsk! There's no talking with this one.
