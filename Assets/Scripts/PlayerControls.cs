@@ -15,9 +15,10 @@ public class PlayerControls : MonoBehaviour
 
     private bool facingRight = true;
 
-
     [Tooltip("Separate cooldown time for each dash")]
     public float dashCooldown = 3f;
+
+    public Weapon[] weapons;
 
     private Rigidbody2D rb;
     private bool isDashing = false;
@@ -27,6 +28,10 @@ public class PlayerControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashUsesRemaining = maxDashUses;
+        foreach (Weapon weapon in weapons)
+        {
+            weapon.user = weapon.transform;
+        }
     }
 
     private void Update()
@@ -71,6 +76,21 @@ public class PlayerControls : MonoBehaviour
         {
             StartCoroutine(Dash());
             animator.SetTrigger("dashTrigger");
+        }
+
+        if (Input.GetButton("Fire1"))
+        {
+            // Get the mouse cursor position in screen coordinates
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = Camera.main.nearClipPlane;
+
+            // Convert the screen coordinates to world coordinates
+            Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            foreach (Weapon weapon in weapons)
+            {
+                weapon.Fire(targetPosition);
+            }
         }
     }
 

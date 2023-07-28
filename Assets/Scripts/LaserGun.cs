@@ -7,7 +7,6 @@ public class LaserGun : Weapon
 {
     public GameObject laserPrefab;
     public float chargeTime = 2.0f;
-    public float laserDuration = 1.0f;
 
     private bool isCharging = false;
 
