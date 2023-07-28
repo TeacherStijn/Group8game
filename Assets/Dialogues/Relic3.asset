@@ -12,5 +12,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
   m_Name: Relic3
   m_EditorClassIdentifier: 
-  actors: []
-  messages: []
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Forest Guardian
+    avatar: {fileID: 21300000, guid: f3596f074611f43cca771cefd24963a5, type: 3}
+  backgroundImages: []
+  messages:
+  - actorId: 0
+    backgroundId: 0
+    text: Alice has reached the coordinates for the Earth relic.
+  - actorId: 1
+    backgroundId: 0
+    text: 
+  - actorId: 0
+    backgroundId: 0
+    text: A giant armor-clad humanoid creature lies on the ground, seemingly unaware
+      of the visitor.
+  - actorId: 1
+    backgroundId: 0
+    text: So this is the relic's guardian. Maybe I should drop the formalities and
+      go for a surprside attack?
+  - actorId: 2
+    backgroundId: 0
+    text: You've lost the chance for that since you first arrived in this forest.
+  - actorId: 1
+    backgroundId: 0
+    text: Oh? So you're aware of how I got here?
+  - actorId: 2
+    backgroundId: 0
+    text: Of course! Your presence is... hard to go unnoticed. You've been summoned.
+      And I see you are here on behalf of the one who's summoned you?
+  - actorId: 1
+    backgroundId: 0
+    text: Do you know about the condition of the dragon's seal?
+  - actorId: 2
+    backgroundId: 0
+    text: Yes. It has been weakened in the last year. Foul forces must be at play.
+  - actorId: 2
+    backgroundId: 0
+    text: However, that does not mean you can run around in the sacred forest, plundering
+      it.
+  - actorId: 1
+    backgroundId: 0
+    text: I get that I'm not welcome here.
+  - actorId: 1
+    backgroundId: 0
+    text: But I don't see other options. I cannot stay here for too long and I've
+      got nowhere to go.
+  - actorId: 2
+    backgroundId: 0
+    text: Hmmm, and you're trapped here until you break the seal on the forest, or
+      until you get summoned back to your world.
+  - actorId: 2
+    backgroundId: 0
+    text: I am sorry, but I cannot let you go any further.
+  - actorId: 0
+    backgroundId: 0
+    text: As he says this, the guardian rises.
+  - actorId: 2
+    backgroundId: 0
+    text: If you want my relic, prove yourself!
+  - actorId: 1
+    backgroundId: 0
+    text: Tsk! Thanks for the help...

@@ -12,5 +12,279 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495625dfe7e7e634b9b52c046f0ebffe, type: 3}
   m_Name: Final Encounter
   m_EditorClassIdentifier: 
-  actors: []
-  messages: []
+  actors:
+  - name: 
+    avatar: {fileID: 0}
+  - name: Alice
+    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+  - name: Wiz
+    avatar: {fileID: 21300000, guid: c6c3271ba004a4c289980685b6d4e2b7, type: 3}
+  - name: Onboard System
+    avatar: {fileID: 0}
+  - name: Dragon
+    avatar: {fileID: 0}
+  backgroundImages: []
+  messages:
+  - actorId: 0
+    backgroundId: -1
+    text: Alice comes back to the place where she was summoned.
+  - actorId: 0
+    backgroundId: -1
+    text: Now that the relics have been taken, the barrier guarding this place is
+      fading.
+  - actorId: 0
+    backgroundId: -1
+    text: Now that the relics have been taken, the barrier guarding this place is
+      fading.
+  - actorId: 1
+    backgroundId: -1
+    text: ...
+  - actorId: 0
+    backgroundId: -1
+    text: It's been a short journey in this foreign world. She hasn't met any humans
+      besides the old man. She's had enough of fighting beasts.
+  - actorId: 0
+    backgroundId: -1
+    text: She hasn't had much freedom within this sealed forest, but now the barrier
+      is broken.
+  - actorId: 0
+    backgroundId: -1
+    text: She will soon be able to return home, or wander around, exploring this
+      wild unknown planet, if she is able to do some maintenance in the nearby kingdom.
+  - actorId: 1
+    backgroundId: -1
+    text: '*sigh*'
+  - actorId: 0
+    backgroundId: -1
+    text: The few words she's exchanged with the relic guardians are on her mind.
+  - actorId: 0
+    backgroundId: -1
+    text: Is the seal really failing? Has the wizard been telling the whole truth?
+  - actorId: 0
+    backgroundId: -1
+    text: She approaches the wizard, seeking answers.
+  - actorId: 1
+    backgroundId: -1
+    text: Hey! I've brought the relics.
+  - actorId: 3
+    backgroundId: -1
+    text: ...
+  - actorId: 0
+    backgroundId: -1
+    text: No answer. The wizard is kneeling over the summoning area with his back
+      turned.
+  - actorId: 1
+    backgroundId: -1
+    text: Hey!
+  - actorId: 0
+    backgroundId: -1
+    text: 'She slowly approaches the wizard, until she is able to hear faint whispers:'
+  - actorId: 2
+    backgroundId: -1
+    text: '...igni... aetherium... lucem... '
+  - actorId: 1
+    backgroundId: -1
+    text: '!?'
+  - actorId: 2
+    backgroundId: -1
+    text: "Primordius draco, surgere!\r"
+  - actorId: 0
+    backgroundId: -1
+    text: "As the wizard is done talking, the relics start rising from the cockpit
+      and releasing intense heat. Alice is forced to let them out to avoid getting
+      burned.\r"
+  - actorId: 1
+    backgroundId: -1
+    text: "Damn, that bastard!\r"
+  - actorId: 0
+    backgroundId: -1
+    text: The ground beneath them starts cracking, fire errupting from the ritual
+      ground.
+  - actorId: 0
+    backgroundId: -1
+    text: The fire forms into an immense figure. A dragon.
+  - actorId: 0
+    backgroundId: -1
+    text: Alice instinctively looks at the wizard who's betrayed her. He is lying
+      down, motionless, bounced around with the rubble.
+  - actorId: 0
+    backgroundId: -1
+    text: As the dragon is incarnating, it raises it raises its leg, threatening
+      to crush the wizard.
+  - actorId: 1
+    backgroundId: -1
+    text: '!!'
+  - actorId: 0
+    backgroundId: -1
+    text: Alice snatches the old man from under the enourmous foot and gets back
+      from the dragon.
+  - actorId: 1
+    backgroundId: -1
+    text: I'm not done with you!
+  - actorId: 3
+    backgroundId: -1
+    text: He is unconcious.
+  - actorId: 4
+    backgroundId: -1
+    text: Ah. Your are protecting that petty man. The one who lied to you?
+  - actorId: 0
+    backgroundId: -1
+    text: The dragon speaks in a reverberating voice, far more imposing than any
+      of the guardians.
+  - actorId: 1
+    backgroundId: -1
+    text: I don't know what happened, but I still need him to return to my world.
+  - actorId: 4
+    backgroundId: -1
+    text: Perhaps I can assist you with that.
+  - actorId: 4
+    backgroundId: -1
+    text: I am free thanks to you, after all.
+  - actorId: 1
+    backgroundId: -1
+    text: You don't seem thankful in the slightest to the old man.
+  - actorId: 4
+    backgroundId: -1
+    text: Of course not! All men of this world are rotten. And that senile fool,
+      he thought he could control me. Me!
+  - actorId: 1
+    backgroundId: -1
+    text: So? You controlled him instead?
+  - actorId: 4
+    backgroundId: -1
+    text: Interesting! How could you tell?
+  - actorId: 1
+    backgroundId: -1
+    text: First of all, I believe he's been here a year ago. Isn't that when he tried
+      to take control of you?
+  - actorId: 4
+    backgroundId: -1
+    text: Indeed. But that does not explain-
+  - actorId: 1
+    backgroundId: -1
+    text: Secondly, that nasty trick with the relics. As old as he is, he probably
+      didn't live long enough to see them in action. Last year he could not even
+      approach them due to the guardians.
+  - actorId: 1
+    backgroundId: -1
+    text: So he's never seen them before.
+  - actorId: 4
+    backgroundId: -1
+    text: Haha! You are smart for a slight human.
+  - actorId: 1
+    backgroundId: -1
+    text: Why does everyone see through my mech?! X-rays can't pass through it.
+  - actorId: 4
+    backgroundId: -1
+    text: After all, I was there when you were summoned, remember?
+  - actorId: 1
+    backgroundId: -1
+    text: Still doesn't explain it.
+  - actorId: 1
+    backgroundId: -1
+    text: ...
+  - actorId: 1
+    backgroundId: -1
+    text: What are you going to do now? Still trying to end the world?
+  - actorId: 4
+    backgroundId: -1
+    text: I've had time to think about that. If there are people as interesting as
+      you in this world, then I want to see it unfold.
+  - actorId: 4
+    backgroundId: -1
+    text: But first, I must make an example of the people who made a fool out of
+      me.
+  - actorId: 1
+    backgroundId: -1
+    text: Aren't they all dead?
+  - actorId: 4
+    backgroundId: -1
+    text: Most, not all. But alas, their filthy legacy remains.
+  - actorId: 1
+    backgroundId: -1
+    text: Ugh. Grudges that last generations are the worst.
+  - actorId: 4
+    backgroundId: -1
+    text: What would you know?
+  - actorId: 1
+    backgroundId: -1
+    text: My world has a long history. I've only scraped the surface of it, but I'm
+      well versed in war.
+  - actorId: 4
+    backgroundId: -1
+    text: Indeed. You want to put an end to it, don't you? But you are powerless
+      to resist it, so you go along with it. That's how humans are.
+  - actorId: 4
+    backgroundId: -1
+    text: You go against your own values for some form of compensation, living a
+      superficial life. Instead of self accomplishment, you seek wealth and recognition.
+  - actorId: 4
+    backgroundId: -1
+    text: But no matter how much you get, it can never quench your thirst. Too weak
+      to seek your own happiness, you seek what others have, distracting yourself.
+  - actorId: 4
+    backgroundId: -1
+    text: Some die poor, some rich. Regardless, they live a misguided life, one they
+      do not truly desire, but can not change. This is why humans can be so evil,
+      so greedy, so pitiful.
+  - actorId: 1
+    backgroundId: -1
+    text: Heh, sounds a lot my society... I had a tough upbringing. All I wanted
+      was to survive, and to protect those around me.
+  - actorId: 4
+    backgroundId: -1
+    text: That is a simple, yet most noble goal.
+  - actorId: 1
+    backgroundId: -1
+    text: I naturally ended up in the army. Constantly trying to improve myself,
+      I became an ace pilot.
+  - actorId: 1
+    backgroundId: -1
+    text: But the more I advanced, the more misguided I got. I was no longer protecting
+      people, but hurting them, maintaining a corrupt order.
+  - actorId: 1
+    backgroundId: -1
+    text: It was depressing. So I screwed it all. Screw distopian societies, screw
+      corrupt order, manipulation and ads.
+  - actorId: 4
+    backgroundId: -1
+    text: Ads?
+  - actorId: 1
+    backgroundId: -1
+    text: I followd my own values. I went against orders to wipe out a village and
+      fought against my own squad instead.
+  - actorId: 1
+    backgroundId: -1
+    text: This is how I became a fugitive, I became part of a resistence that fights
+      society to protect people. Eventually, I almost died being chased by an entire
+      platoon, and then I got here.
+  - actorId: 4
+    backgroundId: -1
+    text: Splendid! I did not think I would get to meet a human like yourself. You
+      heart is not much different from a dragon's!
+  - actorId: 1
+    backgroundId: -1
+    text: But we are not the same.
+  - actorId: 4
+    backgroundId: -1
+    text: Hmm?
+  - actorId: 1
+    backgroundId: -1
+    text: We might hate the same thing. But I fight to protect people. You fight
+      to destroy them out of hatred.
+  - actorId: 1
+    backgroundId: -1
+    text: Even the legacy of the people who once defeated you?
+  - actorId: 4
+    backgroundId: -1
+    text: I would not use that word if I were you.
+  - actorId: 1
+    backgroundId: -1
+    text: They fought to protect themselves. And now you are trying to get revenge
+      on the their legacy? I will not allow this! I am done running away!
+  - actorId: 4
+    backgroundId: -1
+    text: A pity. Neither of us will back down.
+  - actorId: 4
+    backgroundId: -1
+    text: ROAAAARRR
