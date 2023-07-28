@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static System.Net.Mime.MediaTypeNames;
+using System;
 
 public class DialoguePlayer : MonoBehaviour
 {
@@ -35,10 +35,12 @@ public class DialoguePlayer : MonoBehaviour
 
     private TMP_Text actorName;
     private TMP_Text messageBody;
+    private CanvasGroup messageBodyGroup;
     private CanvasGroup dialogueUI;
 
+    [Tooltip("Currently played dialogue; assign value to start playing a dialogue immediately")]
     [SerializeField] private Dialogue dialogue;
-    private int currentMessageIdx;
+    private int currentMessageIdx = 0;
 
     public void DisplayNextMessage()
     {
@@ -56,12 +58,13 @@ public class DialoguePlayer : MonoBehaviour
         // Display actor image
         actorImage.sprite = actor.avatar;
         actorImage.gameObject.SetActive(actor.avatar != null);
+        actorImage.rectTransform.LeanAlpha(Convert.ToSingle(actor.avatar != null), fadeTime / 2).setIgnoreTimeScale(true);
 
         // Display text
         actorName.text = actor.name;
         messageBody.text = message.text;
         messageBox.gameObject.SetActive(message.text.Length != 0);
-        nameBox.gameObject.SetActive(actor.name.Length != 0);
+        nameBox.gameObject.SetActive(actor.name.Length != 0 && message.text.Length != 0);
         AnimateTextAlpha();
 
     }
@@ -75,11 +78,11 @@ public class DialoguePlayer : MonoBehaviour
                 if (dialogue.backgroundImages[backgroundId])
                 {
                     background.sprite = dialogue.backgroundImages[backgroundId];
-                    background.rectTransform.LeanAlpha(1f, fadeTime);
+                    background.rectTransform.LeanAlpha(1f, fadeTime).setIgnoreTimeScale(true);
                 }
                 else // Null background: Hide previous background
                 {
-                    background.rectTransform.LeanAlpha(0, fadeTime);
+                    background.rectTransform.LeanAlpha(0, fadeTime).setIgnoreTimeScale(true);
                 }
             }
             else
@@ -91,7 +94,8 @@ public class DialoguePlayer : MonoBehaviour
 
     private void AnimateTextAlpha()
     {
-        // TODO: Tween TMP alpha
+        messageBodyGroup.alpha = 0;
+        messageBodyGroup.LeanAlpha(1f, fadeTime).setIgnoreTimeScale(true);
     }
 
     public void OpenDialogue(Dialogue newDialogue)
@@ -100,27 +104,30 @@ public class DialoguePlayer : MonoBehaviour
         currentMessageIdx = 0;
 
         // Make sure the dialogue box is invisible at the start of the dialogue
-        background.rectTransform.LeanAlpha(0, 0);
+        background.rectTransform.LeanAlpha(0, 0).setIgnoreTimeScale(true);
         dialogueUI.alpha = 0;
-        dialogueUI.LeanAlpha(1f, 0.4f).setEaseInCubic();
+        dialogueUI.LeanAlpha(1f, 0.5f).setEaseInCubic().setIgnoreTimeScale(true);
 
         // Display the first message to overwrite previous message display
         DisplayNextMessage();
         isPlayingDialogue = true;
+        Time.timeScale = 0f;
     }
 
     public void CloseDialogue()
     {
         dialogue = null;
-        dialogueUI.LeanAlpha(0f, fadeTime);
-        background.rectTransform.LeanAlpha(0, fadeTime);
+        dialogueUI.LeanAlpha(0f, fadeTime).setIgnoreTimeScale(true);
+        background.rectTransform.LeanAlpha(0, fadeTime).setIgnoreTimeScale(true);
         isPlayingDialogue = false;
+        Time.timeScale = 1f;
     }
 
     private void Start()
     {
         actorName = nameBox.GetComponentInChildren<TMP_Text>();
         messageBody = messageBox.GetComponentInChildren<TMP_Text>();
+        messageBodyGroup = messageBox.GetComponentInChildren<CanvasGroup>();
         dialogueUI = messageBox.parent.GetComponent<CanvasGroup>();
 
         if (!actorName || !messageBody || !dialogueUI || !background)
@@ -129,11 +136,21 @@ public class DialoguePlayer : MonoBehaviour
         }
 
         // Make sure the dialogue box is active and invisible at the start
-        dialogueUI.alpha = 0f;
         dialogueUI.gameObject.SetActive(true);
-        background.rectTransform.LeanAlpha(0, 0);
         background.gameObject.SetActive(true);
-        CloseDialogue();
+        dialogueUI.alpha = 0f;
+
+        // Check if there's a dialogue to play at the start of the level
+        if (dialogue)
+        {
+            // Start with the background image already showing and the dialogue box fading in
+            OpenDialogue(dialogue);
+            background.rectTransform.LeanAlpha(1f, 0).setIgnoreTimeScale(true);
+        }
+        else
+        {
+            background.rectTransform.LeanAlpha(0, 0).setIgnoreTimeScale(true);
+        }
     }
 
     private void Update()
