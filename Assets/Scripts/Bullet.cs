@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
     [Tooltip("The object will be destroyed after this many seconds")]
     public float lifetime = 10f;
 
+    public float damage = 10f;
+
     [Tooltip("Rotate the bullet in the direction of its initial velocity")]
     public bool faceForward = true;
 
@@ -37,14 +39,15 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit something");
-        if (other.gameObject.CompareTag("Player"))
+
+        bool isHittable = other.CompareTag("Player") || other.CompareTag("Enemy");
+        if (isHittable && !CompareTag(other.tag))
         {
-            // Make the player drop it's shit
-            Debug.Log("Hit!");
-            // PlayerManager.lifeManager.takeDamage()
+            CharacterStats stats = other.GetComponent<CharacterStats>();
+            stats.TakeDamage(damage);
         }
     }
 }

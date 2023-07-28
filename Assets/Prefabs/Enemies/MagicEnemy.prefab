@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0390e5d30d66b554d86afad4474e98ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 40
   speed: 3
-  health: 5
   detectionRadius: 25
   player: {fileID: 0}
   weapon: {fileID: -2752169779941642499, guid: c7fdce0f9c6b066418bd1afa2e23b0a6, type: 3}
