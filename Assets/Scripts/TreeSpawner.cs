@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TreeSpawner : MonoBehaviour
 {
-    [SerializeField]
     public GameObject treePrefab;
     public float xSpawnRange = 175;
     public float ySpawnRange = 175;
     public int maxTrees = 200;
+
+    [Tooltip("Distance between the center of the spawned objects will be no lower than this")]
+    public float minimumDistance = 1f;
+
+    public Transform spawnedObjectContainer;
 
     private Camera mainCamera;
 
@@ -34,12 +38,16 @@ public class TreeSpawner : MonoBehaviour
             float spawnPosY = Random.Range(mainCamera.transform.position.y - ySpawnRange, mainCamera.transform.position.y + ySpawnRange);
             spawnPosition = new Vector3(spawnPosX, spawnPosY, 0);
 
-            canSpawnHere = !Physics2D.OverlapCircle(spawnPosition, 0.5f); // assuming the tree width is 1 unit
+            canSpawnHere = !Physics2D.OverlapCircle(spawnPosition, minimumDistance / 2);
 
             if (canSpawnHere)
             {
                 //Instantiate tree at the spawn position.
-                Instantiate(treePrefab, spawnPosition, Quaternion.identity);
+                GameObject tree = Instantiate(treePrefab, spawnPosition, Quaternion.identity);
+                if (spawnedObjectContainer)
+                {
+                    tree.transform.parent = spawnedObjectContainer;
+                }
             }
         }
     }

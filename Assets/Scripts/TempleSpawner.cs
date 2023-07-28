@@ -10,6 +10,7 @@ public class TempleSpawner : MonoBehaviour
 
     public Vector2 minSpawnDistance = new Vector2(70, 70);
     public Vector2 maxSpawnDistance = new Vector2(140, 140);
+    public Transform spawnedObjectContainer;
 
     private void Start()
     {
@@ -33,6 +34,10 @@ public class TempleSpawner : MonoBehaviour
 
         // Instantiate the temple.
         GameObject temple = Instantiate(templePrefab, spawnPos, Quaternion.identity);
+        if (spawnedObjectContainer)
+        {
+            temple.transform.parent = spawnedObjectContainer;
+        }
 
         Debug.Log("Temple added");
 

@@ -8,8 +8,6 @@ public class DirectLineEnemy : Enemy
     protected override void Start()
     {
         base.Start();
-        this.detectionRadius = 15;
-        this.speed = 0.5f;
     }
 
     public override void Move()
@@ -19,5 +17,13 @@ public class DirectLineEnemy : Enemy
 
         // Move towards player.
         transform.position += direction * speed * Time.deltaTime;
+
+        // Flip to match sprite movement, assuming the base sprite is facing left
+        Vector3 scale = transform.localScale;
+        if ((scale.x > 0 && direction.x > 0) || (scale.x < 0 && direction.x < 0))
+        {
+            scale.x = -scale.x;
+        }
+        transform.localScale = scale;
     }
 }

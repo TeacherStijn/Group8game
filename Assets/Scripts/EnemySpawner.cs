@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
 
     // Not spawn enemies right away; giving player some time
     public float spawnDelay = 3f;
+    public Transform spawnedObjectContainer;
 
     private float nextSpawnTime;
     private int currentEnemies = 0;
@@ -92,6 +93,10 @@ public class EnemySpawner : MonoBehaviour
             AssignWeaponToEnemy(enemy.GetComponent<Enemy>());
             currentEnemies++;
             Enemy.OnDestroyed -= () => currentEnemies--;
+            if (spawnedObjectContainer)
+            {
+                enemy.transform.parent = spawnedObjectContainer;
+            }
         }
     }
 
@@ -101,6 +106,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Hard coded one single guardian for now!
         GameObject guardian = Instantiate(guardianPrefabs[0], spawnPos.position, Quaternion.identity);
+        guardian.transform.parent = spawnedObjectContainer;
         AssignWeaponToEnemy(guardian.GetComponent<Enemy>());
     }
 
