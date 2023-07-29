@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : EnemyStats
 {
     public float speed;
-    public int health;
     public float detectionRadius;
     public GameObject player;
 
@@ -13,9 +12,6 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     public GameObject loot;
-
-    public delegate void EnemyDestroyed();
-    public static event EnemyDestroyed OnDestroyed;
 
     private bool startShooting = false;
 
@@ -31,7 +27,7 @@ public class Enemy : MonoBehaviour
 
         if (distanceToPlayer <= detectionRadius && startShooting)
         {
-            weapon.Fire(player);
+            weapon.Fire(player.transform.position);
         }
 
         Move();
@@ -70,21 +66,14 @@ public class Enemy : MonoBehaviour
         transform.localPosition = originalPos;
     }
 
-    public void TakeDamage(int damage)
+    public override void Die()
     {
-        health -= damage;
-        if (health <= 0)
+        // semi random drop stuff for player?
+        if (loot)
         {
-            OnDestroyed?.Invoke();
-
-            // semi random drop stuff for player?
-            if (loot)
-            {
-                Vector3 spawnPos = transform.position;
-                Instantiate(loot, spawnPos, Quaternion.identity);
-            }
-
-            Destroy(gameObject);
+            Instantiate(loot, transform.position, Quaternion.identity);
         }
+
+        base.Die();
     }
 }

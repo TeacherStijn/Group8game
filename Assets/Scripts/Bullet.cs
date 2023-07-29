@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
     [Tooltip("The object will be destroyed after this many seconds")]
     public float lifetime = 10f;
 
+    public float damage = 10f;
+
     [Tooltip("Rotate the bullet in the direction of its initial velocity")]
     public bool faceForward = true;
 
@@ -22,29 +24,28 @@ public class Bullet : MonoBehaviour
 
         if (faceForward)
         {
-            if (rb.velocity.y == 0f)
-            {
-
-                rb.rotation = 90f - 180f * Convert.ToSingle(rb.velocity.x > 0f);
-            }
-            else
-            {
-                // x/y assumes the base bullet sprite is facing up; y/x assumes it's facing right
-                rb.rotation = -Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
-            }
+            // x/y assumes the base bullet sprite is facing up; y/x assumes it's facing right
+            rb.rotation = -Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
+            
+            // Make sure the object's rotation is right from the frame it loads
+            transform.rotation = Quaternion.Euler(0, 0, rb.rotation);
         }
 
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit something");
-        if (other.gameObject.CompareTag("Player"))
+
+        bool isHittable = other.CompareTag("Player") || other.CompareTag("Enemy");
+        if (isHittable && !CompareTag(other.tag))
         {
-            // Make the player drop it's shit
-            Debug.Log("Hit!");
-            // PlayerManager.lifeManager.takeDamage()
+            CharacterStats stats = other.GetComponent<CharacterStats>();
+            if (stats)
+            {
+                stats.TakeDamage(damage);
+            }
         }
     }
 }

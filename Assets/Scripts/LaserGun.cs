@@ -7,7 +7,6 @@ public class LaserGun : Weapon
 {
     public GameObject laserPrefab;
     public float chargeTime = 2.0f;
-    public float laserDuration = 1.0f;
 
     private bool isCharging = false;
 
@@ -16,9 +15,9 @@ public class LaserGun : Weapon
         base.Start();
     }
 
-    public override void Fire(GameObject target)
+    public override void Fire(Vector3 target)
     {
-        if (isCharging || !target)
+        if (isCharging)
         {
             return;
         }
@@ -29,16 +28,13 @@ public class LaserGun : Weapon
         StartCoroutine(ChargeAndFire(target));
     }
 
-    private IEnumerator ChargeAndFire(GameObject target)
+    private IEnumerator ChargeAndFire(Vector3 target)
     {
-        // Shake enemy for chargeTime
-        user.StartCoroutine(user.Shake(2f, 0.1f));
-
         yield return new WaitForSeconds(chargeTime);
 
-        Vector2 direction = (target.transform.position - user.transform.position).normalized;
+        Vector3 direction = (target - transform.position).normalized;
 
-        GameObject laser = Instantiate(laserPrefab, user.transform.position + Vector3.up, Quaternion.identity);
+        GameObject laser = Instantiate(laserPrefab, transform.position + direction, Quaternion.identity);
 
         laser.GetComponent<Rigidbody2D>().velocity = direction;
 
