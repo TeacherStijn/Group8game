@@ -19,7 +19,7 @@ public class MagicGun : Weapon
     {
         if (isReadyToFire)
         {
-            Vector2 direction = (target - transform.position).normalized;
+            Vector2 direction = (target - transform.parent.position).normalized;
 
             GameObject magicBullet = Instantiate(magicPrefab, transform.position + Vector3.up, Quaternion.identity);
 

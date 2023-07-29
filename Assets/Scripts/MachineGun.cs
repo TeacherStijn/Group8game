@@ -7,7 +7,7 @@ public class MachineGun : Weapon
 {
     public GameObject bulletPrefab;
     public float fireDelay = 0.5f;
-    private Boolean isReadyToFire = true;
+    private bool isReadyToFire = true;
 
     protected override void Start()
     {
@@ -18,7 +18,7 @@ public class MachineGun : Weapon
     {
         if (isReadyToFire)
         {
-            Vector2 direction = (target - transform.position).normalized;
+            Vector2 direction = (target - transform.parent.position).normalized;
 
             GameObject bullet = Instantiate(bulletPrefab, transform.position + Vector3.up, Quaternion.identity);
 
@@ -38,6 +38,6 @@ public class MachineGun : Weapon
     {
         yield return new WaitForSeconds(fireDelay);
 
-        isReadyToFire = false;
+        isReadyToFire = true;
     }
 }

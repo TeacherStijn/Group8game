@@ -32,7 +32,7 @@ public class LaserGun : Weapon
     {
         yield return new WaitForSeconds(chargeTime);
 
-        Vector2 direction = (target - transform.position).normalized;
+        Vector2 direction = (target - transform.parent.position).normalized;
 
         GameObject laser = Instantiate(laserPrefab, transform.position + Vector3.up, Quaternion.identity);
 
