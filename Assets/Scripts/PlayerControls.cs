@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(PlayerStats))]
 public class PlayerControls : MonoBehaviour
 {
     public float moveSpeed = 5f;
@@ -23,14 +24,21 @@ public class PlayerControls : MonoBehaviour
     public Weapon[] weapons;
 
     private Rigidbody2D rb;
+    private PlayerStats stats;
     private bool isDashing = false;
     private int dashUsesRemaining;
+    private int weaponSlotCount;
+    private int weaponCount;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<PlayerStats>();
         dashUsesRemaining = maxDashUses;
         weapons = weaponParent.GetComponentsInChildren<Weapon>();
+        weaponCount = weaponSlotCount = weapons.Length;
+
+        stats.onHealthChanged += BreakWeapons;
     }
 
     private void Update()
@@ -88,9 +96,9 @@ public class PlayerControls : MonoBehaviour
 
             weaponParent.LookAt(targetPosition, Vector3.forward);
 
-            foreach (Weapon weapon in weapons)
+            for (int i = 0; i < weaponCount; i++)
             {
-                weapon.Fire(targetPosition);
+                weapons[i].Fire(targetPosition);
             }
         }
     }
@@ -129,5 +137,11 @@ public class PlayerControls : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
 
         dashUsesRemaining++;
+    }
+
+    private void BreakWeapons(float health, float maxHealth)
+    {
+        weaponCount = (int)(health / maxHealth * weaponSlotCount) + 1;
+        Mathf.Min(weaponCount, weaponSlotCount);
     }
 }
