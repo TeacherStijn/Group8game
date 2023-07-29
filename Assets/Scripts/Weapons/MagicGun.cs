@@ -39,6 +39,6 @@ public class MagicGun : Weapon
     {
         yield return new WaitForSeconds(fireDelay);
 
-        isReadyToFire = false;
+        isReadyToFire = true;
     }
 }

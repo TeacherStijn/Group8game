@@ -223,7 +223,7 @@ TextureImporter:
         width: 25
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,6 +231,48 @@ TextureImporter:
       bones: []
       spriteID: 75a10b4a52e9f994fa26671f47d0d3e3
       internalID: -846479631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootEffects_0
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1212
+        width: 25
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab606432c07623841971f1581d2c2661
+      internalID: 1628512474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootEffects_1
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1516
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c9d8cc367cf664b8548c24de66ed24
+      internalID: -1384693197
       vertices: []
       indices: 
       edges: []
@@ -250,6 +292,7 @@ TextureImporter:
       BigMagicYellow: -1032501260
       BulletWithTrail: 213725411
       LaserRed: -846479631
+      ShootEffects_0: 991072967
       ShootEffects_1: -1384693197
       SmallMagicBlue: -657240275
       SmallMagicYellow: 584785459
