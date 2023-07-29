@@ -33,7 +33,7 @@ public class RockSpawner : MonoBehaviour
         {
             float spawnPosX = Random.Range(mainCamera.transform.position.x - xSpawnRange, mainCamera.transform.position.x + xSpawnRange);
             float spawnPosY = Random.Range(mainCamera.transform.position.y - ySpawnRange, mainCamera.transform.position.y + ySpawnRange);
-            spawnPosition = new Vector3(spawnPosX, spawnPosY, 0);
+            spawnPosition = new Vector3(spawnPosX, spawnPosY, 1);
 
             canSpawnHere = !Physics2D.OverlapCircle(spawnPosition, 0.5f); // assuming the tree width is 1 unit
 
