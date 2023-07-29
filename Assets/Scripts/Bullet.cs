@@ -26,6 +26,9 @@ public class Bullet : MonoBehaviour
         {
             // x/y assumes the base bullet sprite is facing up; y/x assumes it's facing right
             rb.rotation = -Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
+            
+            // Make sure the object's rotation is right from the frame it loads
+            transform.rotation = Quaternion.Euler(0, 0, rb.rotation);
         }
 
         Destroy(gameObject, lifetime);
