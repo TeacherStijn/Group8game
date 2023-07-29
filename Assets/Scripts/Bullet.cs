@@ -47,7 +47,10 @@ public class Bullet : MonoBehaviour
         if (isHittable && !CompareTag(other.tag))
         {
             CharacterStats stats = other.GetComponent<CharacterStats>();
-            stats.TakeDamage(damage);
+            if (stats)
+            {
+                stats.TakeDamage(damage);
+            }
         }
     }
 }
