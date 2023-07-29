@@ -18,6 +18,8 @@ public class PlayerControls : MonoBehaviour
     [Tooltip("Separate cooldown time for each dash")]
     public float dashCooldown = 3f;
 
+    [Tooltip("Weapons get detected automatically from the 'Weapon slots' container")]
+    public Transform weaponParent;
     public Weapon[] weapons;
 
     private Rigidbody2D rb;
@@ -28,6 +30,7 @@ public class PlayerControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashUsesRemaining = maxDashUses;
+        weapons = weaponParent.GetComponentsInChildren<Weapon>();
     }
 
     private void Update()
