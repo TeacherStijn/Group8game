@@ -28,10 +28,6 @@ public class PlayerControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashUsesRemaining = maxDashUses;
-        foreach (Weapon weapon in weapons)
-        {
-            weapon.user = weapon.transform;
-        }
     }
 
     private void Update()

@@ -18,9 +18,9 @@ public class MachineGun : Weapon
     {
         if (isReadyToFire)
         {
-            Vector2 direction = (target - user.position).normalized;
+            Vector2 direction = (target - transform.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, user.position + Vector3.up, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position + Vector3.up, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody2D>().velocity = direction;
 

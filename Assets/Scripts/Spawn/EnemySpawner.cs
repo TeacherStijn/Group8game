@@ -123,7 +123,6 @@ public class EnemySpawner : MonoBehaviour
         }
 
         enemy.weapon = Instantiate(enemy.weapon, weaponHolder.position, weaponHolder.rotation, weaponHolder);
-        enemy.weapon.user = enemy.transform;
     }
 
     // Nog even cleanup:
