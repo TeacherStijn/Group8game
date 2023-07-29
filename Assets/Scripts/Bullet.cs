@@ -24,16 +24,8 @@ public class Bullet : MonoBehaviour
 
         if (faceForward)
         {
-            if (rb.velocity.y == 0f)
-            {
-
-                rb.rotation = 90f - 180f * Convert.ToSingle(rb.velocity.x > 0f);
-            }
-            else
-            {
-                // x/y assumes the base bullet sprite is facing up; y/x assumes it's facing right
-                rb.rotation = -Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
-            }
+            // x/y assumes the base bullet sprite is facing up; y/x assumes it's facing right
+            rb.rotation = -Mathf.Atan2(rb.velocity.x, rb.velocity.y) * Mathf.Rad2Deg;
         }
 
         Destroy(gameObject, lifetime);

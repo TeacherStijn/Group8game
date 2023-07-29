@@ -86,6 +86,8 @@ public class PlayerControls : MonoBehaviour
             // Convert the screen coordinates to world coordinates
             Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
+            weaponParent.LookAt(targetPosition, Vector3.forward);
+
             foreach (Weapon weapon in weapons)
             {
                 weapon.Fire(targetPosition);
