@@ -21,38 +21,39 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: feae90600911a421d9eef9bcd29a3474, type: 3}
   - name: Onboard System
     avatar: {fileID: 0}
-  backgroundImages: []
+  backgroundImages:
+  - {fileID: 0}
   messages:
   - actorId: 1
-    backgroundId: 0
+    backgroundId: -1
     text: The Water relic should be around here.
   - actorId: 1
-    backgroundId: 0
+    backgroundId: -1
     text: But it's an open area. Is it buried in the ground?
   - actorId: 1
-    backgroundId: 0
+    backgroundId: -1
     text: ...
   - actorId: 3
-    backgroundId: 0
+    backgroundId: -1
     text: Large life form detected underneath. Getting closer.
   - actorId: 1
-    backgroundId: 0
+    backgroundId: -1
     text: '!?'
   - actorId: 0
-    backgroundId: 0
+    backgroundId: -1
     text: The earth starts shaking violently, threatening to swallow the mech. A
       forest guardian raises from the muddy ground.
   - actorId: 0
-    backgroundId: 0
+    backgroundId: -1
     text: A giant monster with a large tree-like limbs and a mouth spanning over
       its entire head. Its hideous body is shaking furiously as it rises to the surface.
   - actorId: 2
-    backgroundId: 0
+    backgroundId: -1
     text: ROAAARRR
   - actorId: 0
-    backgroundId: 0
+    backgroundId: -1
     text: Immediately, the monster swings one of its limbs, attemping to grab the
       mech.
   - actorId: 1
-    backgroundId: 0
+    backgroundId: -1
     text: Tsk! There's no talking with this one.
