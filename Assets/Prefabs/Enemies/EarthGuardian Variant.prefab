@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EarthGuardian Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5289101909950323906, guid: 4788ec9a79eac2649941c3556fbf3aaa, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6622997782969244016, guid: 4788ec9a79eac2649941c3556fbf3aaa, type: 3}
       propertyPath: m_Size.x
       value: 0.24

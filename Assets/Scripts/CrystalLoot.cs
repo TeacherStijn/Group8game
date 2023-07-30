@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class CrystalLoot : Loot
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float rotationSpeed = 50f;
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Yes! You got a crystal");
-        // Gain the item + log something + achievement
+        transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotationSpeed);
     }
 }

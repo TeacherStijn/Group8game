@@ -19,6 +19,10 @@ public class Enemy : EnemyStats
     {
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(WaitWithShooting());
+        if (weapon)
+        {
+            loot = weapon.gameObject;
+        }
     }
 
     protected void Update()
@@ -69,9 +73,13 @@ public class Enemy : EnemyStats
     public override void Die()
     {
         // semi random drop stuff for player?
-        if (loot)
+        if (weapon || loot)
         {
-            Instantiate(loot, transform.position, Quaternion.identity);
+            GameObject drop = Instantiate(loot, transform.position, Quaternion.identity);
+            // Making bit bigger to see it
+            drop.tag = "Loot";
+            drop.transform.localScale *= 20;
+            Debug.Log("Dropping some loot!");
         }
 
         base.Die();

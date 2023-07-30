@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2752169779941642499}
   m_Layer: 0
   m_Name: MagicGunPrefab
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5cf55a54e1b1d4cacb7aaba105c490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 0}
   magicPrefab: {fileID: 4823847641750537725, guid: f9b5dbe0a5c96b845b177169852afeb5, type: 3}
   fireDelay: 0.5

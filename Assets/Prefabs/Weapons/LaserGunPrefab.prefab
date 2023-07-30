@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3680237355358017588}
   m_Layer: 0
   m_Name: LaserGunPrefab
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca57dd128e0cdcc4cb5174f05cfdb1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 0}
   laserPrefab: {fileID: 3498964201339439061, guid: 915e9b27d50db1b4899f4d8dc22ade32, type: 3}
   chargeTime: 2
