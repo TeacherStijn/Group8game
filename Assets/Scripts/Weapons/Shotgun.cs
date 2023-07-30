@@ -24,7 +24,7 @@ public class ShotgunWeapon : Weapon
         Vector3 direction = (target - transform.parent.position).normalized;
 
         // Calculate the initial rotation angle for the spread
-        float initialAngle = - spreadAngle / 2f;
+        float initialAngle = 90 - spreadAngle / 2f;
         float angleStep = spreadAngle / (bulletCount - 1);
 
         for (int i = 0; i < bulletCount; i++)
