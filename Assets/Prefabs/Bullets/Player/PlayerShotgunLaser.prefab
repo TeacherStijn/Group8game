@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 5767039693274003200, guid: 331eec6f83ff2544e996a1ceaf15d879, type: 3}
   speed: 30
-  lifetime: 1
+  lifetime: 0.75
   damage: 10
   faceForward: 1
 --- !u!50 &-8131124677439258146

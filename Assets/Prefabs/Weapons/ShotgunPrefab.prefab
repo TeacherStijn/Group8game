@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8b50682b0a4dd48abd9532fbea8f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3498964201339439061, guid: fe8820c3450b3684a8016528c3eb3890, type: 3}
+  bulletPrefab: {fileID: 3498964201339439061, guid: b6541a4604db861488fd61da93aec626, type: 3}
   bulletCount: 5
   spreadAngle: 30
-  fireDelay: 0.5
+  fireDelay: 0.75
