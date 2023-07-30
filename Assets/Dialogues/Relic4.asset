@@ -16,7 +16,7 @@ MonoBehaviour:
   - name: 
     avatar: {fileID: 0}
   - name: Alice
-    avatar: {fileID: 21300000, guid: 8c5f13fea7ec2ef4688b06bcef08a862, type: 3}
+    avatar: {fileID: 21300000, guid: 397665a2d7800404fb939235598dea0f, type: 3}
   - name: Forest Guardian
     avatar: {fileID: 21300000, guid: 4224e0ae60f354990b0b328ad39ecad7, type: 3}
   - name: Onboard System
