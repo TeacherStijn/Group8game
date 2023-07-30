@@ -9,7 +9,6 @@ public class PlayerStats : CharacterStats
     {
         base.Die();
 
-        int currentSceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneBuildIndex);
+        SceneManager.LoadScene(2); // 2 is game over screen
     }
 }

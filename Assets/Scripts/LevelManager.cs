@@ -17,4 +17,9 @@ public class LevelManager : MonoBehaviour
             Debug.Log("No scene left to load");
         }
     }
+
+    public static void RetryFirstLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
