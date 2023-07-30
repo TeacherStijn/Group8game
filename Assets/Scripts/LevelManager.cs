@@ -22,4 +22,9 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public static void ReturnToTitle()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
