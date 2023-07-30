@@ -79,6 +79,8 @@ public class Enemy : EnemyStats
             // Making bit bigger to see it
             drop.tag = "Loot";
             drop.transform.localScale *= 20;
+            BoxCollider2D collider = drop.AddComponent<BoxCollider2D>();
+            collider.isTrigger = true;
             Debug.Log("Dropping some loot!");
         }
 

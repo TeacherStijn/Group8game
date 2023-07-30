@@ -25,6 +25,7 @@ public class InventoryManager : MonoBehaviour
         switch (item.tag) {
             case "Weapon": 
                 items.Add(item);
+                Debug.Log("Setting new weapon?");
                 SetWeapon(item);
                 break;
             case "Crystal":

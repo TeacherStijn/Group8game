@@ -30,6 +30,7 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         Debug.LogFormat("{0} died.", gameObject.name);
+        GameObject.Find("GameTimer").GetComponent<GameTimer>().StopTimer();
         Destroy(gameObject);
     }
 }

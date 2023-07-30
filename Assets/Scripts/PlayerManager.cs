@@ -44,7 +44,8 @@ public class PlayerManager : MonoBehaviour
         CheckForSummoningSpot();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag) {
             case "Crystal":
@@ -53,7 +54,7 @@ public class PlayerManager : MonoBehaviour
                 inventoryManager.AddItem(collision.gameObject);
                 break;
 
-            case "Loot":
+            case "Weapon":
                 Debug.Log("Got a new gun!");
                 inventoryManager.AddItem(collision.gameObject);
                 break;
@@ -61,6 +62,8 @@ public class PlayerManager : MonoBehaviour
             default:
                 break;
         }
+
+        Destroy(collision.gameObject);
     }
 
     private void CheckForSummoningSpot()
