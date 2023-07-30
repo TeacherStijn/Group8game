@@ -8,6 +8,7 @@ public class PlayerStats : CharacterStats
     public override void Die()
     {
         base.Die();
+        GameObject.Find("GameTimer").GetComponent<GameTimer>().StopTimer();
 
         SceneManager.LoadScene(2); // 2 is game over screen
     }
