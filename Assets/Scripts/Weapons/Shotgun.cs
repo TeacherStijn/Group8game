@@ -37,6 +37,11 @@ public class ShotgunWeapon : Weapon
             // Calculate the direction for the current bullet based on the rotation
             Vector2 bulletDirection = new Vector2(Mathf.Cos(rotation.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(rotation.eulerAngles.z * Mathf.Deg2Rad));
             bullet.GetComponent<Rigidbody2D>().velocity = bulletDirection;
+
+            if (shootingSound)
+            {
+                shootingSound.Play();
+            }
         }
 
         // The gun is not ready to fire again yet

@@ -38,6 +38,11 @@ public class LaserGun : Weapon
 
         laser.GetComponent<Rigidbody2D>().velocity = direction;
 
+        if (shootingSound)
+        {
+            shootingSound.Play();
+        }
+
         Debug.Log("Laser fired");
         
         yield return new WaitForSeconds(laser.GetComponent<Bullet>().lifetime);

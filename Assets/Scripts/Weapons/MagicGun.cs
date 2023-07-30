@@ -25,6 +25,11 @@ public class MagicGun : Weapon
 
             magicBullet.GetComponent<Rigidbody2D>().velocity = direction;
 
+            if (shootingSound)
+            { 
+                shootingSound.Play();
+            }
+
             Debug.Log("Magic gun fired");
 
             // The gun is not ready to fire again yet
