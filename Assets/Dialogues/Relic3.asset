@@ -19,7 +19,8 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: 397665a2d7800404fb939235598dea0f, type: 3}
   - name: Forest Guardian
     avatar: {fileID: 21300000, guid: f3596f074611f43cca771cefd24963a5, type: 3}
-  backgroundImages: []
+  backgroundImages:
+  - {fileID: 0}
   messages:
   - actorId: 0
     backgroundId: 0
