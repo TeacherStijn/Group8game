@@ -27,6 +27,11 @@ public class Enemy : EnemyStats
 
     protected void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 
         if (distanceToPlayer <= detectionRadius && startShooting)
