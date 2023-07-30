@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -846479631, guid: 0b2722c0c3616e648b339b21d6f5b762, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779615290118432469ff79d5b7cc6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/BulletPrefabs/LaserPrefab.prefab
+=======
+  hitEffect: {fileID: 0}
+  speed: 30
+  lifetime: 1
+  damage: 10
+  faceForward: 1
+>>>>>>> Stashed changes:Assets/Prefabs/Bullets/Enemy/LaserPrefab.prefab
 --- !u!50 &-8131124677439258146
 Rigidbody2D:
   serializedVersion: 4

@@ -75,8 +75,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream:Assets/EnemyPrefabs/PatternEnemy.prefab
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df8d80ba4b35b4b88b790c88b3a43b34, type: 3}
+=======
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 19dfd921a037b4f46bb92e0780572e60, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/Bullets/Player/PlayerShotgunLaser.prefab
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

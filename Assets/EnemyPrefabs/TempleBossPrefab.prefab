@@ -74,8 +74,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream:Assets/EnemyPrefabs/TempleBossPrefab.prefab
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7720e217ee603448cb402c3121fe3528, type: 3}
+=======
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -846479631, guid: 0b2722c0c3616e648b339b21d6f5b762, type: 3}
+>>>>>>> Stashed changes:Assets/Prefabs/Bullets/Enemy/ShotgunLaserPrefab.prefab
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
