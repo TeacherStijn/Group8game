@@ -83,9 +83,15 @@ public class Enemy : EnemyStats
             GameObject drop = Instantiate(loot, transform.position, Quaternion.identity);
             // Making bit bigger to see it
             drop.tag = "Loot";
-            drop.transform.localScale *= 20;
+            drop.transform.localScale *= 10;
             BoxCollider2D collider = drop.AddComponent<BoxCollider2D>();
             collider.isTrigger = true;
+            Rigidbody2D rb = drop.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+            }
+
             Debug.Log("Dropping some loot!");
         }
 

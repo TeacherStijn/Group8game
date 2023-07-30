@@ -12,10 +12,13 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        int crystalCount = items.FindAll(obj => obj.CompareTag("Crystal")).Count;
-        if (crystalCount >= MAX_CRYSTALS)
+        if (items != null)
         {
-            FoundCrystals = true;
+            int crystalCount = items.FindAll(obj => obj.CompareTag("Crystal")).Count;
+            if (crystalCount >= MAX_CRYSTALS)
+            {
+                FoundCrystals = true;
+            }
         }
     }
 
@@ -39,14 +42,30 @@ public class InventoryManager : MonoBehaviour
 
     public void SetWeapon(GameObject item)
     {
-        // Get Weapon slots container
-        GameObject[] slots = GameObject.Find("Weapon slots").GetComponents<GameObject>();
-        
-        for (int i = 0; i < slots.Length; i++)
+        /*        // Get Weapon slots container
+                GameObject[] slots = GameObject.FindGameObjectWithTag("WeaponSlots").GetComponents<GameObject>();
+
+                for (int i = 0; i < slots.Length; i++)
+                {
+                    if (slots[i] == null)
+                    {
+                        slots[i] = Instantiate(item, transform, true);
+                        return;
+                    }
+                }*/
+
+        Transform parentTransform = GameObject.FindGameObjectWithTag("WeaponSlots").transform;
+
+        for (int i = 0; i < parentTransform.childCount; i++)
         {
-            if (slots[i] == null)
+            GameObject slot = parentTransform.GetChild(i).gameObject;
+
+            // Not sure if this is good;
+            if (slot.transform.childCount == 0)
             {
-                slots[i] = Instantiate(item, transform, true);
+                // Assign the item to the slot and break the loop
+                item.transform.SetParent(slot.transform);
+                item.transform.localPosition = Vector3.zero;
                 return;
             }
         }

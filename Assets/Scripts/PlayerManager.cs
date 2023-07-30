@@ -31,39 +31,15 @@ public class PlayerManager : MonoBehaviour
     public static GameObject Player { get => instance.player; }
 
     public GameObject summoningSpot;
-    private InventoryManager inventoryManager;
 
     private void Start()
     {
         summoningSpot = GameObject.FindGameObjectWithTag("SummoningSpot");
-        inventoryManager = GetComponent<InventoryManager>();
     }
 
     private void Update()
     {
         CheckForSummoningSpot();
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch (collision.gameObject.tag) {
-            case "Crystal":
-                Debug.Log("Yes! You got a crystal");
-                // Gain the item + log something + achievement
-                inventoryManager.AddItem(collision.gameObject);
-                break;
-
-            case "Weapon":
-                Debug.Log("Got a new gun!");
-                inventoryManager.AddItem(collision.gameObject);
-                break;
-                
-            default:
-                break;
-        }
-
-        Destroy(collision.gameObject);
     }
 
     private void CheckForSummoningSpot()

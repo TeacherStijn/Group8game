@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 457451112120568002}
   - component: {fileID: 8810859322788893718}
   - component: {fileID: 4271699395302421514}
-  - component: {fileID: 4059657957750420888}
+  - component: {fileID: -6987103225021301016}
   m_Layer: 0
   m_Name: FinalDragon
   m_TagString: FinalDragon
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4059657957750420888
+--- !u!114 &-6987103225021301016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,16 +130,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6116792913369341952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b027df856c48bf449dafdaf9509d51c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bddf50a5cee1b943bf260015024196f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 500
-  speed: 0
-  detectionRadius: 0
+  speed: 5
+  detectionRadius: 150
   player: {fileID: 0}
-  weapon: {fileID: 0}
+  weapon: {fileID: -2752169779941642499, guid: c7fdce0f9c6b066418bd1afa2e23b0a6, type: 3}
   loot: {fileID: 0}
-  xSpeed: 20
-  ySpeed: 20
-  xOffsetSpeed: 5
-  yOffsetSpeed: 5
+  maxMoveDistance: 5

@@ -146,7 +146,7 @@ MonoBehaviour:
   detectionRadius: 5
   player: {fileID: 0}
   weapon: {fileID: 8719040952276640495, guid: dcc84aadaa5818646bdbb7ed8f225534, type: 3}
-  loot: {fileID: 0}
+  loot: {fileID: 5139893536898442296, guid: 2d272204b95598241b42b5539583538b, type: 3}
   xSpeed: 1
   ySpeed: 1
   xOffsetSpeed: 0.5

@@ -29,6 +29,7 @@ public class PlayerControls : MonoBehaviour
     private int dashUsesRemaining;
     private int weaponSlotCount;
     private int weaponCount;
+    // private InventoryManager inventoryManager;
 
     private void Start()
     {

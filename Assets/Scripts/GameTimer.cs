@@ -12,7 +12,7 @@ public class GameTimer : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        // StartCoroutine(UpdateTimer());
+        StartCoroutine(UpdateTimer());
     }
 
     IEnumerator UpdateTimer()
@@ -24,7 +24,7 @@ public class GameTimer : MonoBehaviour
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f2");
 
-            GetComponent<TextMeshPro>().text = minutes + ":" + seconds;
+            GetComponent<TextMeshProUGUI>().text = minutes + ":" + seconds;
 
             yield return null;
         }
