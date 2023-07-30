@@ -24,6 +24,11 @@ public class MachineGun : Weapon
 
             bullet.GetComponent<Rigidbody2D>().velocity = direction;
 
+            if (shootingSound)
+            {
+                shootingSound.Play();
+            }
+
             Debug.Log("Bullet gun fired");
 
             // The gun is not ready to fire again yet
