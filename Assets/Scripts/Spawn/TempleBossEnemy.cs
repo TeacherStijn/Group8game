@@ -58,6 +58,7 @@ public class TempleBossEnemy : Enemy
         hasDied = true;
 
         PlayerManager.AddCrystal();
+        PlayerManager.RestoreHealth(10f);
         if (weaponReward)
         {
             PlayerManager.AddWeapon(weaponReward);

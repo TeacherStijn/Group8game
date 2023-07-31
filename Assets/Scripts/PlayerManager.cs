@@ -58,7 +58,7 @@ public class PlayerManager : MonoBehaviour
     {
         instance.relicUI.text = "Relics Collected: " + ++instance.crystalCount + "/4";
 
-        if (instance.crystalCount >= 1)
+        if (instance.crystalCount >= 4)
         {
             Debug.Log("You have gathered all crystals!");
             instance.relicUI.text = "Return to summoning area";
@@ -68,5 +68,10 @@ public class PlayerManager : MonoBehaviour
             instance.summonMarker.SetActive(true);
         }
 
+    }
+
+    static public void RestoreHealth(float restoreValue)
+    {
+        Player.GetComponent<PlayerStats>().RestoreHealth(restoreValue);
     }
 }

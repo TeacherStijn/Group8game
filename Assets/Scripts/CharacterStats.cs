@@ -27,6 +27,12 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    public void RestoreHealth(float restoreValue)
+    {
+        health = Mathf.Min(health + restoreValue, maxHealth);
+        onHealthChanged?.Invoke(health, maxHealth);
+    }
+
     public virtual void Die()
     {
         Debug.LogFormat("{0} died.", gameObject.name);

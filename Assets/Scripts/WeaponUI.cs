@@ -14,7 +14,12 @@ public class WeaponUI : MonoBehaviour
         weaponText = GetComponent<TMP_Text>();
         stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         controls = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
-        stats.onHealthChanged += UpdateWeaponUI;
+        //stats.onHealthChanged += UpdateWeaponUI;
+    }
+
+    private void Update()
+    {
+        UpdateWeaponUI(stats.health, stats.maxHealth);
     }
 
     public void UpdateWeaponUI(float currentHealth, float maxHealth)
