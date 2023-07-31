@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -29,61 +31,40 @@ public class PlayerManager : MonoBehaviour
 
     public static GameObject Player { get => instance.player; }
 
-    public GameObject summoningSpot;
-    private InventoryManager inventoryManager;
+    public Vector3 summoningSpot = Vector3.zero;
+    public GameObject dragon;
+    public GameObject summonMarker;
+    public TMP_Text relicUI;
+    public int crystalCount = 0;
 
     private void Start()
     {
-        summoningSpot = GameObject.FindGameObjectWithTag("SummoningSpot");
-        inventoryManager = GetComponent<InventoryManager>();
     }
 
-    private void Update()
+    static public void AddWeapon(Weapon weapon)
     {
-        CheckForSummoningSpot();
+        Debug.Log("Add Weapon");
+
+        var playerControls = Player.GetComponent<PlayerControls>();
+
+        var referenceWeapon = playerControls.weapons[playerControls.weaponCount % playerControls.weaponSlotCount + playerControls.weaponCount - playerControls.weaponSlotCount];
+        playerControls.weapons.Insert(0, Instantiate(weapon, referenceWeapon.transform.position, referenceWeapon.transform.rotation, referenceWeapon.transform.parent));
+
+        playerControls.weaponCount++;
+
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    static public void AddCrystal()
     {
-        switch (collision.gameObject.tag) {
-            case "Crystal":
-                Debug.Log("Yes! You got a crystal");
-                // Gain the item + log something + achievement
-                inventoryManager.AddItem(collision.gameObject);
-                break;
-
-            case "Weapon":
-                Debug.Log("Got a new gun!");
-                inventoryManager.AddItem(collision.gameObject);
-                break;
-                
-            default:
-                break;
-        }
-
-        Destroy(collision.gameObject);
-    }
-
-    private void CheckForSummoningSpot()
-    {
-        float distanceToSummoningSpot = Vector3.Distance(transform.position, summoningSpot.transform.position);
-        // Distance threshold 
-        if (distanceToSummoningSpot < 2f)
+        if (++instance.crystalCount >= 4)
         {
-            Debug.Log("You are near the summoning spot!");
-            
-            if (GetComponent<InventoryManager>().FoundCrystals)
-            {
-                Debug.Log("You have gathered all crystals!");
-                // Start quest text
-                // Spawn Dragon
-                GameObject dragonPrefab = GameObject.FindGameObjectWithTag("FinalDragon");
-                GameObject theDragon = Instantiate(dragonPrefab, summoningSpot.transform, true);
+            Debug.Log("You have gathered all crystals!");
 
-                // Setting Questmarker to Parent Dragon
-                theDragon.transform.SetParent(GameObject.Find("Summoning Marker").transform);
-            }
+            // Spawn Dragon
+            instance.dragon.SetActive(true);
+            instance.summonMarker.SetActive(true);
         }
+
+        instance.relicUI.text = "Relics Collected: " + instance.crystalCount + "/4";
     }
 }

@@ -1,38 +1,67 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
 public class TempleBossEnemy : Enemy
 {
-    public Transform startPoint;
-    public float updateInterval = 1f;
-    public float range = 7f;
-    private Vector3 targetPosition;
+    public Weapon weaponReward;
+
+    private bool hasDied = false;
 
     protected override void Start()
     {
         base.Start();
-        this.detectionRadius = 3f;
-        this.speed = 0.5f;
-        startPoint = this.transform;
-        InvokeRepeating("UpdateTarget", 0, updateInterval);
+        isWaiting = true;
     }
 
     public override void Move()
     {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distanceToPlayer > detectionRadius / 2)
+        {
+            if (isWaiting)
+            {
+                health = maxHealth;
+            }
+            return;
+        }
+
+        isWaiting = false;
+
+        // Normalized to just get the direction
+        Vector3 direction = (player.GetComponent<Transform>().position - transform.position).normalized;
+
+        // Move towards player.
+        transform.position += direction * speed * Time.deltaTime;
+
+        // Flip to match sprite movement, assuming the base sprite is facing left
+        Vector3 scale = transform.localScale;
+        if ((scale.x > 0 && direction.x > 0) || (scale.x < 0 && direction.x < 0))
+        {
+            scale.x = -scale.x;
+        }
+        transform.localScale = scale;
     }
 
-    private void UpdateTarget()
+    public override void Die()
     {
-        float randomX = Random.Range(startPoint.position.x - range, startPoint.position.x + range);
-        float randomY = Random.Range(startPoint.position.y - range, startPoint.position.y + range);
-        float randomZ = Random.Range(startPoint.position.z - range, startPoint.position.z + range);
+        if (hasDied)
+        {
+            return;
+        }
 
-        targetPosition = new Vector3(randomX, randomY, randomZ);
+        hasDied = true;
+
+        PlayerManager.AddCrystal();
+        if (weaponReward)
+        {
+            PlayerManager.AddWeapon(weaponReward);
+        }
+        base.Die();
     }
 }

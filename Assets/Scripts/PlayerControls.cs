@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 [RequireComponent(typeof(PlayerStats))]
 public class PlayerControls : MonoBehaviour
@@ -21,22 +23,23 @@ public class PlayerControls : MonoBehaviour
 
     [Tooltip("Weapons get detected automatically from the 'Weapon slots' container")]
     public Transform weaponParent;
-    public Weapon[] weapons;
+    public List<Weapon> weapons;
+    public int weaponSlotCount { get; private set; }
+    public int weaponCount;
 
     private Rigidbody2D rb;
     private PlayerStats stats;
     private bool isDashing = false;
     private int dashUsesRemaining;
-    private int weaponSlotCount;
-    private int weaponCount;
+    private int brokenWeaponCount = 0;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<PlayerStats>();
         dashUsesRemaining = maxDashUses;
-        weapons = weaponParent.GetComponentsInChildren<Weapon>();
-        weaponCount = weaponSlotCount = weapons.Length;
+        weapons = weaponParent.GetComponentsInChildren<Weapon>().ToList();
+        weaponCount = weaponSlotCount = weapons.Count;
 
         stats.onHealthChanged += BreakWeapons;
     }
@@ -96,7 +99,7 @@ public class PlayerControls : MonoBehaviour
 
             weaponParent.LookAt(targetPosition, Vector3.forward);
 
-            for (int i = 0; i < weaponCount; i++)
+            for (int i = 0; i < System.Math.Min(weaponSlotCount, weaponCount - brokenWeaponCount); i++)
             {
                 weapons[i].Fire(targetPosition);
             }
@@ -141,7 +144,7 @@ public class PlayerControls : MonoBehaviour
 
     private void BreakWeapons(float health, float maxHealth)
     {
-        weaponCount = (int)(health / maxHealth * weaponSlotCount) + 1;
+        brokenWeaponCount = (int)((1 - health / maxHealth) * weaponSlotCount);
         Mathf.Min(weaponCount, weaponSlotCount);
     }
 }

@@ -15,14 +15,12 @@ public class Enemy : EnemyStats
 
     private bool startShooting = false;
 
+    protected bool isWaiting = false;
+
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(WaitWithShooting());
-        if (weapon)
-        {
-            loot = weapon.gameObject;
-        }
     }
 
     protected void Update()
@@ -34,7 +32,7 @@ public class Enemy : EnemyStats
 
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distanceToPlayer <= detectionRadius && startShooting)
+        if (!isWaiting && distanceToPlayer <= detectionRadius && startShooting)
         {
             weapon.Fire(player.transform.position);
         }
@@ -77,18 +75,6 @@ public class Enemy : EnemyStats
 
     public override void Die()
     {
-        // semi random drop stuff for player?
-        if (weapon || loot)
-        {
-            GameObject drop = Instantiate(loot, transform.position, Quaternion.identity);
-            // Making bit bigger to see it
-            drop.tag = "Loot";
-            drop.transform.localScale *= 20;
-            BoxCollider2D collider = drop.AddComponent<BoxCollider2D>();
-            collider.isTrigger = true;
-            Debug.Log("Dropping some loot!");
-        }
-
         base.Die();
     }
 }

@@ -6,7 +6,7 @@ public class CharacterStats : MonoBehaviour
 
     public float maxHealth = 100f;
 
-    public float health { get; private set; }
+    public float health { get; protected set; }
 
     public System.Action<float, float> onHealthChanged;
 
