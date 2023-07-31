@@ -56,15 +56,17 @@ public class PlayerManager : MonoBehaviour
 
     static public void AddCrystal()
     {
-        if (++instance.crystalCount >= 4)
+        instance.relicUI.text = "Relics Collected: " + ++instance.crystalCount + "/4";
+
+        if (instance.crystalCount >= 1)
         {
             Debug.Log("You have gathered all crystals!");
+            instance.relicUI.text = "Return to summoning area";
 
             // Spawn Dragon
             instance.dragon.SetActive(true);
             instance.summonMarker.SetActive(true);
         }
 
-        instance.relicUI.text = "Relics Collected: " + instance.crystalCount + "/4";
     }
 }

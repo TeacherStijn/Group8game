@@ -26,12 +26,12 @@ public class PlayerControls : MonoBehaviour
     public List<Weapon> weapons;
     public int weaponSlotCount { get; private set; }
     public int weaponCount;
+    public int brokenWeaponCount = 0;
 
     private Rigidbody2D rb;
     private PlayerStats stats;
     private bool isDashing = false;
     private int dashUsesRemaining;
-    private int brokenWeaponCount = 0;
 
     private void Start()
     {
