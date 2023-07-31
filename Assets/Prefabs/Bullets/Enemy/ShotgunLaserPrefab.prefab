@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3985227305829687967}
   m_Layer: 0
   m_Name: ShotgunLaserPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779615290118432469ff79d5b7cc6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 5767039693274003200, guid: de6b2e998142a174597c29dc796607f6, type: 3}
   speed: 30
   lifetime: 1
-  damage: 10
+  damage: 8
   faceForward: 0
 --- !u!50 &-8131124677439258146
 Rigidbody2D:

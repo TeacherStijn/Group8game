@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779615290118432469ff79d5b7cc6d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 5767039693274003200, guid: de6b2e998142a174597c29dc796607f6, type: 3}
   speed: 20
   lifetime: 10
+  damage: 10
   faceForward: 1
 --- !u!70 &6610800957604661284
 CapsuleCollider2D:
